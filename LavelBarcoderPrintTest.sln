@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LavelBarcoderPrintTest", "LavelBarcoderPrintTest\LavelBarcoderPrintTest.csproj", "{C7504D6B-7B49-4DBE-B39D-3BE29BB1E41D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7504D6B-7B49-4DBE-B39D-3BE29BB1E41D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7504D6B-7B49-4DBE-B39D-3BE29BB1E41D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7504D6B-7B49-4DBE-B39D-3BE29BB1E41D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7504D6B-7B49-4DBE-B39D-3BE29BB1E41D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E04B8DEF-A40B-4C04-8AE0-06E577E2DBF7}
+	EndGlobalSection
+EndGlobal
