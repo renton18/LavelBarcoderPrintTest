@@ -65,58 +65,58 @@ bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, in
             TextOut(hdc, 5, 305, BarcodeData, BarcodeData.Length);
             DeleteObject(mFont);
 
-            String stringFont = "Meiryo UI";
+            String stringFontName = "Meiryo UI";
 
             //文字列1
-            IntPtr mFont1 = CreateFont(100, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont1 = CreateFont(100, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont1);
-            String BarcodeData1 = "文字列１";
-            TextOut(hdc, 5, 5, BarcodeData1, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData1));
+            String printString1 = "文字列１";
+            TextOut(hdc, 5, 5, printString1, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString1));
             DeleteObject(mFont1);
             //文字列2
-            IntPtr mFont2 = CreateFont(100, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont2 = CreateFont(100, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont2);
-            String BarcodeData2 = "文字列２";
-            TextOut(hdc, 300, 5, BarcodeData2, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData2));
+            String printString2 = "文字列２";
+            TextOut(hdc, 300, 5, printString2, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString2));
             DeleteObject(mFont2);
 
             //文字列3
-            IntPtr mFont3 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont3 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont3);
-            String BarcodeData3 = "文字列３";
-            TextOut(hdc, 5, 105, BarcodeData3, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData3));
+            String printString3 = "文字列３";
+            TextOut(hdc, 5, 105, printString3, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString3));
             DeleteObject(mFont3);
             //文字列4
-            IntPtr mFont4 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont4 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont4);
-            String BarcodeData4 = "文字列４";
-            TextOut(hdc, 300, 105, BarcodeData4, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData4));
+            String printString4 = "文字列４";
+            TextOut(hdc, 300, 105, printString4, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString4));
             DeleteObject(mFont4);
 
             //文字列5
-            IntPtr mFont5 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont5 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont5);
-            String BarcodeData5 = "文字列5";
-            TextOut(hdc, 5, 165, BarcodeData5, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData5));
+            String printString5 = "文字列5";
+            TextOut(hdc, 5, 165, printString5, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString5));
             DeleteObject(mFont5);
             //文字列6
-            IntPtr mFont6 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont6 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont6);
-            String BarcodeData6 = "文字列6";
-            TextOut(hdc, 300, 165, BarcodeData6, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData6));
+            String printString6 = "文字列6";
+            TextOut(hdc, 300, 165, printString6, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString6));
             DeleteObject(mFont6);
 
             //文字列7
-            IntPtr mFont7 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont7 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont7);
-            String BarcodeData7 = "文字列7";
-            TextOut(hdc, 5, 225, BarcodeData7, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData7));
+            String printString7 = "文字列7";
+            TextOut(hdc, 5, 225, printString7, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString7));
             DeleteObject(mFont7);
             //文字列8
-            IntPtr mFont8 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFont);
+            IntPtr mFont8 = CreateFont(60, 0, 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont8);
-            String BarcodeData8 = "文字列8";
-            TextOut(hdc, 300, 225, BarcodeData8, Encoding.GetEncoding("Shift_JIS").GetByteCount(BarcodeData8));
+            String printString8 = "文字列8";
+            TextOut(hdc, 300, 225, printString8, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString8));
             DeleteObject(mFont8);
 
             //デバイスコンテキストの開放　これは必ず必要
