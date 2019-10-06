@@ -22,6 +22,12 @@ namespace LavelBarcoderPrintTest
         private static extern int BitBlt(IntPtr hDestDC, int x, int y, int nWidth, int nHeight, IntPtr hSrcDC, int xSrc, int ySrc, int dwRop);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
         static extern IntPtr CreateCompatibleDC(IntPtr hdc);
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        private extern static IntPtr CreateSolidBrush(uint crColor);
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        static extern bool FillRgn(IntPtr hdc, IntPtr hrgn, IntPtr hbr);
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        static extern IntPtr CreateRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
 
         int pageCount = 0;
         string printerName = "";
@@ -46,17 +52,6 @@ namespace LavelBarcoderPrintTest
             this.attributeList = attributeList;
             this.stringList = stringList;
 
-            //印字サイズ、X軸、Y軸
-            //attributeList.AddRange(new int[] { 100, 5, 295 });
-            //attributeList.AddRange(new int[] { 100, 5, 5 });
-            //attributeList.AddRange(new int[] { 100, 300, 5 });
-            //attributeList.AddRange(new int[] { 60, 5, 105 });
-            //attributeList.AddRange(new int[] { 60, 300, 105 });
-            //attributeList.AddRange(new int[] { 60, 5, 165 });
-            //attributeList.AddRange(new int[] { 60, 300, 165 });
-            //attributeList.AddRange(new int[] { 60, 5, 225 });
-            //attributeList.AddRange(new int[] { 60, 30, 225 });
-
             this.printerName = printerName;
             this.dt = dt;
             this.barcode = barcode;
@@ -78,6 +73,7 @@ namespace LavelBarcoderPrintTest
         #region 印刷処理
         public void Print()
         {
+            pageCount = 0;
             PrintDocument pd = new PrintDocument();
             if (printerName != "")
             {
@@ -121,61 +117,72 @@ namespace LavelBarcoderPrintTest
             //バーコードの印字 バーコードの場合は9番目の引数を0にする必要あり
             IntPtr mFont = CreateFont(attributeList[0], attributeList[1], 0, 0, 0, false, false, false, 0, 0, 0, 0, 0, barcode);
             SelectObject(hdc, mFont);
-            String BarcodeData = stringList[0];
+            String BarcodeData = dt.Rows[pageCount][0].ToString();
             TextOut(hdc, attributeList[2], attributeList[3], BarcodeData, BarcodeData.Length);
             DeleteObject(mFont);
 
             String stringFontName = "Meiryo UI";
+            //String stringFontName = "Arial";
+            //縦文字
+            IntPtr hsolidbrush = CreateSolidBrush((uint)ColorTranslator.ToWin32(Color.Red));
+            SelectObject(hdc, hsolidbrush);
+            FillRgn(hdc, CreateRectRgn(attributeList[38], attributeList[39], attributeList[36], attributeList[37]), hsolidbrush);
+            DeleteObject(hsolidbrush);
+            IntPtr mFont10 = CreateFont(attributeList[36], attributeList[37], 900, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
+            SelectObject(hdc, mFont10);
+            String verticalString = dt.Rows[pageCount][9].ToString();
+            TextOut(hdc, attributeList[38], attributeList[39], verticalString, Encoding.GetEncoding("Shift_JIS").GetByteCount(verticalString));
+            DeleteObject(mFont10);
 
             //文字列1
             IntPtr mFont1 = CreateFont(attributeList[4], attributeList[5], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont1);
-            String printString1 = stringList[1];
+            String printString1 = dt.Rows[pageCount][1].ToString();
             TextOut(hdc, attributeList[6], attributeList[7], printString1, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString1));
             DeleteObject(mFont1);
             //文字列2
             IntPtr mFont2 = CreateFont(attributeList[8], attributeList[9], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont2);
-            String printString2 = stringList[2];
+            String printString2 = dt.Rows[pageCount][2].ToString();
             TextOut(hdc, attributeList[10], attributeList[11], printString2, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString2));
             DeleteObject(mFont2);
 
             //文字列3
             IntPtr mFont3 = CreateFont(attributeList[12], attributeList[13], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont3);
-            String printString3 = stringList[3];
+            String printString3 = dt.Rows[pageCount][3].ToString();
             TextOut(hdc, attributeList[14], attributeList[15], printString3, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString3));
             DeleteObject(mFont3);
             //文字列4
             IntPtr mFont4 = CreateFont(attributeList[16], attributeList[17], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont4);
-            String printString4 = stringList[4];
+            String printString4 = dt.Rows[pageCount][4].ToString();
             TextOut(hdc, attributeList[18], attributeList[19], printString4, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString4));
             DeleteObject(mFont4);
 
             //文字列5
             IntPtr mFont5 = CreateFont(attributeList[20], attributeList[21], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont5);
-            String printString5 = stringList[5];
+            String printString5 = dt.Rows[pageCount][5].ToString();
             TextOut(hdc, attributeList[22], attributeList[23], printString5, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString5));
             DeleteObject(mFont5);
             //文字列6
             IntPtr mFont6 = CreateFont(attributeList[24], attributeList[25], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont6);
-            String printString6 = stringList[6];
+            String printString6 = dt.Rows[pageCount][6].ToString();
             TextOut(hdc, attributeList[26], attributeList[27], printString6, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString6));
             DeleteObject(mFont6);
 
             //文字列7
             IntPtr mFont7 = CreateFont(attributeList[28], attributeList[29], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont7);
-            String printString7 = stringList[7];
+            String printString7 = dt.Rows[pageCount][7].ToString();
             TextOut(hdc, attributeList[30], attributeList[31], printString7, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString7));
             DeleteObject(mFont7);
             //文字列8
             IntPtr mFont8 = CreateFont(attributeList[32], attributeList[33], 0, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont8);
-            String printString8 = stringList[8];
+            String printString8 = dt.Rows[pageCount][8].ToString();
             TextOut(hdc, attributeList[34], attributeList[35], printString8, Encoding.GetEncoding("Shift_JIS").GetByteCount(printString8));
             DeleteObject(mFont8);
         }

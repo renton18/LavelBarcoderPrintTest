@@ -12,15 +12,6 @@ namespace LavelBarcoderPrintTest
         {
             InitializeComponent();
         }
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static System.IntPtr CreateFont(int nHeight, int nWidth, int nEscapement, int nOrientation, int fnWeight, bool fdwItalic,
-bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, int fdwClipPrecision, int fdwQuality, int fdwPitchAndFamily, string lpszFace);
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static System.IntPtr SelectObject(System.IntPtr hObject, System.IntPtr hFont);
-        [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
-        private extern static int TextOut(IntPtr hdc, int nXStart, int nYStart, string lpString, int cbString);
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static bool DeleteObject(System.IntPtr hObject);
 
         List<int> attributeList = new List<int>();
         List<string> stringList = new List<string>();
@@ -50,16 +41,39 @@ bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, in
                     return;
                 }
             }
-            stringList.Clear();
-            stringList.Add(tbStr1.Text);
-            stringList.Add(tbStr2.Text);
-            stringList.Add(tbStr3.Text);
-            stringList.Add(tbStr4.Text);
-            stringList.Add(tbStr5.Text);
-            stringList.Add(tbStr6.Text);
-            stringList.Add(tbStr7.Text);
-            stringList.Add(tbStr8.Text);
-            stringList.Add(tbStr9.Text);
+            //stringList.Clear();
+            //stringList.Add(tbStr1.Text);
+            //stringList.Add(tbStr2.Text);
+            //stringList.Add(tbStr3.Text);
+            //stringList.Add(tbStr4.Text);
+            //stringList.Add(tbStr5.Text);
+            //stringList.Add(tbStr6.Text);
+            //stringList.Add(tbStr7.Text);
+            //stringList.Add(tbStr8.Text);
+            //stringList.Add(tbStr9.Text);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Barcode");
+            dt.Columns.Add("str1");
+            dt.Columns.Add("str2");
+            dt.Columns.Add("str3");
+            dt.Columns.Add("str4");
+            dt.Columns.Add("str5");
+            dt.Columns.Add("str6");
+            dt.Columns.Add("str7");
+            dt.Columns.Add("str8");
+            dt.Columns.Add("str9");
+            DataRow row = dt.NewRow();
+            row[0] = tbStr1.Text;
+            row[1] = tbStr2.Text;
+            row[2] = tbStr3.Text;
+            row[3] = tbStr4.Text;
+            row[4] = tbStr5.Text;
+            row[5] = tbStr6.Text;
+            row[6] = tbStr7.Text;
+            row[7] = tbStr8.Text;
+            row[8] = tbStr9.Text;
+            row[9] = tbStr10.Text;
+            dt.Rows.Add(row);
             attributeList.Clear();
             attributeList.AddRange(new int[] { int.Parse(tbH1.Text), int.Parse(tbW1.Text), int.Parse(tbX1.Text), int.Parse(tbY1.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH2.Text), int.Parse(tbW2.Text), int.Parse(tbX2.Text), int.Parse(tbY2.Text) });
@@ -70,8 +84,9 @@ bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, in
             attributeList.AddRange(new int[] { int.Parse(tbH7.Text), int.Parse(tbW7.Text), int.Parse(tbX7.Text), int.Parse(tbY7.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH8.Text), int.Parse(tbW8.Text), int.Parse(tbX8.Text), int.Parse(tbY8.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH9.Text), int.Parse(tbW9.Text), int.Parse(tbX9.Text), int.Parse(tbY9.Text) });
+            attributeList.AddRange(new int[] { int.Parse(tbH10.Text), int.Parse(tbW10.Text), int.Parse(tbX10.Text), int.Parse(tbY10.Text) });
 
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", new DataTable(), "NW-7", stringList, attributeList);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, "NW-7", stringList, attributeList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
         }
 
@@ -88,6 +103,40 @@ bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, in
             //クリップボードにコピーする
             Clipboard.SetText(sb.ToString());
 
+        }
+
+        private void cbPattern_TextChanged(object sender, EventArgs e)
+        {
+            if (((ComboBox)sender).Text == "A")
+            {
+                tbX4.Text = "15";
+                tbX5.Text = "220";
+                tbX6.Text = "15";
+                tbX7.Text = "220";
+                tbX8.Text = "15";
+                tbX9.Text = "220";
+
+                tbStr10.Enabled = false;
+                tbH10.Enabled = false;
+                tbW10.Enabled = false;
+                tbX10.Enabled = false;
+                tbY10.Enabled = false;
+            }
+            else if (((ComboBox)sender).Text == "B")
+            {
+                tbX4.Text = "60";
+                tbX5.Text = "260";
+                tbX6.Text = "60";
+                tbX7.Text = "260";
+                tbX8.Text = "60";
+                tbX9.Text = "260";
+
+                tbStr10.Enabled = true;
+                tbH10.Enabled = true;
+                tbW10.Enabled = true;
+                tbX10.Enabled = true;
+                tbY10.Enabled = true;
+            }
         }
     }
 }
