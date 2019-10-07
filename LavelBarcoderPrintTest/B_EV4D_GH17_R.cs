@@ -11,23 +11,29 @@ namespace LavelBarcoderPrintTest
     public class B_EV4D_GH17_R
     {
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static System.IntPtr CreateFont(int nHeight, int nWidth, int nEscapement, int nOrientation, int fnWeight, bool fdwItalic, bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, int fdwClipPrecision, int fdwQuality, int fdwPitchAndFamily, string lpszFace);
+        static extern System.IntPtr CreateFont(int nHeight, int nWidth, int nEscapement, int nOrientation, int fnWeight, bool fdwItalic, bool fdwUnderline, bool fdwStrikeOut, int fdwCharSet, int fdwOutputPrecision, int fdwClipPrecision, int fdwQuality, int fdwPitchAndFamily, string lpszFace);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static System.IntPtr SelectObject(System.IntPtr hObject, System.IntPtr hFont);
+        static extern System.IntPtr SelectObject(System.IntPtr hObject, System.IntPtr hFont);
         [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
-        private extern static int TextOut(IntPtr hdc, int nXStart, int nYStart, string lpString, int cbString);
+        static extern int TextOut(IntPtr hdc, int nXStart, int nYStart, string lpString, int cbString);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static bool DeleteObject(System.IntPtr hObject);
+        static extern bool DeleteObject(System.IntPtr hObject);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private static extern int BitBlt(IntPtr hDestDC, int x, int y, int nWidth, int nHeight, IntPtr hSrcDC, int xSrc, int ySrc, int dwRop);
+        static extern int BitBlt(IntPtr hDestDC, int x, int y, int nWidth, int nHeight, IntPtr hSrcDC, int xSrc, int ySrc, int dwRop);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
         static extern IntPtr CreateCompatibleDC(IntPtr hdc);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private extern static IntPtr CreateSolidBrush(uint crColor);
+        static extern IntPtr CreateSolidBrush(uint crColor);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
         static extern bool FillRgn(IntPtr hdc, IntPtr hrgn, IntPtr hbr);
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
         static extern IntPtr CreateRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        static extern int SetTextColor(IntPtr hdc, int crColor);
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        static extern int SetBkColor(IntPtr hdc, int crColor);
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        static extern bool Rectangle(IntPtr hdc, int left, int top, int right, int bottom);
 
         int pageCount = 0;
         string printerName = "";
@@ -37,6 +43,7 @@ namespace LavelBarcoderPrintTest
         List<string> stringList = new List<string>();
         string barcode;
 
+        #region コンストラクタ
         public B_EV4D_GH17_R(string printerName, DataTable dt, string barcode, List<string> stringList, List<int> attributeList)
         {
             //dt.Columns.Add("id");
@@ -56,6 +63,7 @@ namespace LavelBarcoderPrintTest
             this.dt = dt;
             this.barcode = barcode;
         }
+        #endregion
 
         #region 印刷イメージを取得する
         public Bitmap GetPrintImage(PictureBox pictureBox)
@@ -123,11 +131,17 @@ namespace LavelBarcoderPrintTest
 
             String stringFontName = "Meiryo UI";
             //String stringFontName = "Arial";
+
+            //IntPtr hsolidbrush = CreateSolidBrush((uint)ColorTranslator.ToWin32(Color.Red));
+            //SelectObject(hdc, hsolidbrush);
+            //FillRgn(hdc, CreateRectRgn(attributeList[38], attributeList[39], attributeList[36], attributeList[37]), hsolidbrush);
+            //DeleteObject(hsolidbrush);
+            //SetBkColor(hdc, ColorTranslator.ToWin32(Color.Black));
+            //SetTextColor(hdc, ColorTranslator.ToWin32(Color.White));
+            //縦文字囲い
+            Rectangle(hdc, attributeList[40], attributeList[41], attributeList[42], attributeList[43]);
+
             //縦文字
-            IntPtr hsolidbrush = CreateSolidBrush((uint)ColorTranslator.ToWin32(Color.Red));
-            SelectObject(hdc, hsolidbrush);
-            FillRgn(hdc, CreateRectRgn(attributeList[38], attributeList[39], attributeList[36], attributeList[37]), hsolidbrush);
-            DeleteObject(hsolidbrush);
             IntPtr mFont10 = CreateFont(attributeList[36], attributeList[37], 900, 0, 0, false, false, false, 128, 0, 0, 0, 0, stringFontName);
             SelectObject(hdc, mFont10);
             String verticalString = dt.Rows[pageCount][9].ToString();

@@ -33,6 +33,11 @@
             this.btnHyouji = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupA = new System.Windows.Forms.GroupBox();
+            this.tbW10 = new System.Windows.Forms.TextBox();
+            this.tbStr10 = new System.Windows.Forms.TextBox();
+            this.tbX10 = new System.Windows.Forms.TextBox();
+            this.tbY10 = new System.Windows.Forms.TextBox();
+            this.tbH10 = new System.Windows.Forms.TextBox();
             this.tbW9 = new System.Windows.Forms.TextBox();
             this.tbW8 = new System.Windows.Forms.TextBox();
             this.tbW7 = new System.Windows.Forms.TextBox();
@@ -87,11 +92,10 @@
             this.cbPattern = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbW10 = new System.Windows.Forms.TextBox();
-            this.tbStr10 = new System.Windows.Forms.TextBox();
-            this.tbX10 = new System.Windows.Forms.TextBox();
-            this.tbY10 = new System.Windows.Forms.TextBox();
-            this.tbH10 = new System.Windows.Forms.TextBox();
+            this.tbW11 = new System.Windows.Forms.TextBox();
+            this.tbX11 = new System.Windows.Forms.TextBox();
+            this.tbY11 = new System.Windows.Forms.TextBox();
+            this.tbH11 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupA.SuspendLayout();
             this.SuspendLayout();
@@ -140,6 +144,10 @@
             // 
             // groupA
             // 
+            this.groupA.Controls.Add(this.tbW11);
+            this.groupA.Controls.Add(this.tbX11);
+            this.groupA.Controls.Add(this.tbY11);
+            this.groupA.Controls.Add(this.tbH11);
             this.groupA.Controls.Add(this.tbW10);
             this.groupA.Controls.Add(this.tbStr10);
             this.groupA.Controls.Add(this.tbX10);
@@ -199,14 +207,69 @@
             this.groupA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupA.Name = "groupA";
             this.groupA.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupA.Size = new System.Drawing.Size(446, 446);
+            this.groupA.Size = new System.Drawing.Size(446, 473);
             this.groupA.TabIndex = 15;
             this.groupA.TabStop = false;
             this.groupA.Text = "パターンA";
             // 
+            // tbW10
+            // 
+            this.tbW10.Enabled = false;
+            this.tbW10.Location = new System.Drawing.Point(228, 96);
+            this.tbW10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbW10.Name = "tbW10";
+            this.tbW10.Size = new System.Drawing.Size(64, 27);
+            this.tbW10.TabIndex = 51;
+            this.tbW10.Text = "15";
+            this.tbW10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbStr10
+            // 
+            this.tbStr10.Enabled = false;
+            this.tbStr10.Location = new System.Drawing.Point(8, 96);
+            this.tbStr10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbStr10.Name = "tbStr10";
+            this.tbStr10.Size = new System.Drawing.Size(139, 27);
+            this.tbStr10.TabIndex = 47;
+            this.tbStr10.Text = "縦文字";
+            this.tbStr10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbX10
+            // 
+            this.tbX10.Enabled = false;
+            this.tbX10.Location = new System.Drawing.Point(302, 96);
+            this.tbX10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbX10.Name = "tbX10";
+            this.tbX10.Size = new System.Drawing.Size(64, 27);
+            this.tbX10.TabIndex = 49;
+            this.tbX10.Text = "5";
+            this.tbX10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbY10
+            // 
+            this.tbY10.Enabled = false;
+            this.tbY10.Location = new System.Drawing.Point(374, 96);
+            this.tbY10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbY10.Name = "tbY10";
+            this.tbY10.Size = new System.Drawing.Size(64, 27);
+            this.tbY10.TabIndex = 50;
+            this.tbY10.Text = "210";
+            this.tbY10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbH10
+            // 
+            this.tbH10.Enabled = false;
+            this.tbH10.Location = new System.Drawing.Point(156, 96);
+            this.tbH10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbH10.Name = "tbH10";
+            this.tbH10.Size = new System.Drawing.Size(64, 27);
+            this.tbH10.TabIndex = 48;
+            this.tbH10.Text = "40";
+            this.tbH10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
             // tbW9
             // 
-            this.tbW9.Location = new System.Drawing.Point(228, 392);
+            this.tbW9.Location = new System.Drawing.Point(228, 425);
             this.tbW9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW9.Name = "tbW9";
             this.tbW9.Size = new System.Drawing.Size(64, 27);
@@ -216,7 +279,7 @@
             // 
             // tbW8
             // 
-            this.tbW8.Location = new System.Drawing.Point(228, 355);
+            this.tbW8.Location = new System.Drawing.Point(228, 388);
             this.tbW8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW8.Name = "tbW8";
             this.tbW8.Size = new System.Drawing.Size(64, 27);
@@ -226,7 +289,7 @@
             // 
             // tbW7
             // 
-            this.tbW7.Location = new System.Drawing.Point(228, 318);
+            this.tbW7.Location = new System.Drawing.Point(228, 351);
             this.tbW7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW7.Name = "tbW7";
             this.tbW7.Size = new System.Drawing.Size(64, 27);
@@ -236,7 +299,7 @@
             // 
             // tbW6
             // 
-            this.tbW6.Location = new System.Drawing.Point(228, 281);
+            this.tbW6.Location = new System.Drawing.Point(228, 314);
             this.tbW6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW6.Name = "tbW6";
             this.tbW6.Size = new System.Drawing.Size(64, 27);
@@ -246,7 +309,7 @@
             // 
             // tbW5
             // 
-            this.tbW5.Location = new System.Drawing.Point(228, 244);
+            this.tbW5.Location = new System.Drawing.Point(228, 277);
             this.tbW5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW5.Name = "tbW5";
             this.tbW5.Size = new System.Drawing.Size(64, 27);
@@ -256,7 +319,7 @@
             // 
             // tbW4
             // 
-            this.tbW4.Location = new System.Drawing.Point(228, 207);
+            this.tbW4.Location = new System.Drawing.Point(228, 240);
             this.tbW4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW4.Name = "tbW4";
             this.tbW4.Size = new System.Drawing.Size(64, 27);
@@ -266,7 +329,7 @@
             // 
             // tbW3
             // 
-            this.tbW3.Location = new System.Drawing.Point(228, 170);
+            this.tbW3.Location = new System.Drawing.Point(228, 203);
             this.tbW3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW3.Name = "tbW3";
             this.tbW3.Size = new System.Drawing.Size(64, 27);
@@ -276,7 +339,7 @@
             // 
             // tbW2
             // 
-            this.tbW2.Location = new System.Drawing.Point(228, 133);
+            this.tbW2.Location = new System.Drawing.Point(228, 166);
             this.tbW2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW2.Name = "tbW2";
             this.tbW2.Size = new System.Drawing.Size(64, 27);
@@ -305,7 +368,7 @@
             // 
             // tbStr9
             // 
-            this.tbStr9.Location = new System.Drawing.Point(9, 392);
+            this.tbStr9.Location = new System.Drawing.Point(9, 425);
             this.tbStr9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr9.Name = "tbStr9";
             this.tbStr9.Size = new System.Drawing.Size(139, 27);
@@ -315,7 +378,7 @@
             // 
             // tbX9
             // 
-            this.tbX9.Location = new System.Drawing.Point(302, 392);
+            this.tbX9.Location = new System.Drawing.Point(302, 425);
             this.tbX9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX9.Name = "tbX9";
             this.tbX9.Size = new System.Drawing.Size(64, 27);
@@ -325,7 +388,7 @@
             // 
             // tbY9
             // 
-            this.tbY9.Location = new System.Drawing.Point(374, 392);
+            this.tbY9.Location = new System.Drawing.Point(374, 425);
             this.tbY9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY9.Name = "tbY9";
             this.tbY9.Size = new System.Drawing.Size(64, 27);
@@ -335,7 +398,7 @@
             // 
             // tbH9
             // 
-            this.tbH9.Location = new System.Drawing.Point(156, 392);
+            this.tbH9.Location = new System.Drawing.Point(156, 425);
             this.tbH9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH9.Name = "tbH9";
             this.tbH9.Size = new System.Drawing.Size(64, 27);
@@ -345,7 +408,7 @@
             // 
             // tbStr8
             // 
-            this.tbStr8.Location = new System.Drawing.Point(9, 355);
+            this.tbStr8.Location = new System.Drawing.Point(9, 388);
             this.tbStr8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr8.Name = "tbStr8";
             this.tbStr8.Size = new System.Drawing.Size(139, 27);
@@ -355,7 +418,7 @@
             // 
             // tbX8
             // 
-            this.tbX8.Location = new System.Drawing.Point(302, 355);
+            this.tbX8.Location = new System.Drawing.Point(302, 388);
             this.tbX8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX8.Name = "tbX8";
             this.tbX8.Size = new System.Drawing.Size(64, 27);
@@ -365,7 +428,7 @@
             // 
             // tbY8
             // 
-            this.tbY8.Location = new System.Drawing.Point(374, 355);
+            this.tbY8.Location = new System.Drawing.Point(374, 388);
             this.tbY8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY8.Name = "tbY8";
             this.tbY8.Size = new System.Drawing.Size(64, 27);
@@ -375,7 +438,7 @@
             // 
             // tbH8
             // 
-            this.tbH8.Location = new System.Drawing.Point(156, 355);
+            this.tbH8.Location = new System.Drawing.Point(156, 388);
             this.tbH8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH8.Name = "tbH8";
             this.tbH8.Size = new System.Drawing.Size(64, 27);
@@ -385,7 +448,7 @@
             // 
             // tbStr7
             // 
-            this.tbStr7.Location = new System.Drawing.Point(9, 318);
+            this.tbStr7.Location = new System.Drawing.Point(9, 351);
             this.tbStr7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr7.Name = "tbStr7";
             this.tbStr7.Size = new System.Drawing.Size(139, 27);
@@ -395,7 +458,7 @@
             // 
             // tbX7
             // 
-            this.tbX7.Location = new System.Drawing.Point(302, 318);
+            this.tbX7.Location = new System.Drawing.Point(302, 351);
             this.tbX7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX7.Name = "tbX7";
             this.tbX7.Size = new System.Drawing.Size(64, 27);
@@ -405,7 +468,7 @@
             // 
             // tbY7
             // 
-            this.tbY7.Location = new System.Drawing.Point(374, 318);
+            this.tbY7.Location = new System.Drawing.Point(374, 351);
             this.tbY7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY7.Name = "tbY7";
             this.tbY7.Size = new System.Drawing.Size(64, 27);
@@ -415,7 +478,7 @@
             // 
             // tbH7
             // 
-            this.tbH7.Location = new System.Drawing.Point(156, 318);
+            this.tbH7.Location = new System.Drawing.Point(156, 351);
             this.tbH7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH7.Name = "tbH7";
             this.tbH7.Size = new System.Drawing.Size(64, 27);
@@ -425,7 +488,7 @@
             // 
             // tbStr6
             // 
-            this.tbStr6.Location = new System.Drawing.Point(9, 281);
+            this.tbStr6.Location = new System.Drawing.Point(9, 314);
             this.tbStr6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr6.Name = "tbStr6";
             this.tbStr6.Size = new System.Drawing.Size(139, 27);
@@ -435,7 +498,7 @@
             // 
             // tbX6
             // 
-            this.tbX6.Location = new System.Drawing.Point(302, 281);
+            this.tbX6.Location = new System.Drawing.Point(302, 314);
             this.tbX6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX6.Name = "tbX6";
             this.tbX6.Size = new System.Drawing.Size(64, 27);
@@ -445,7 +508,7 @@
             // 
             // tbY6
             // 
-            this.tbY6.Location = new System.Drawing.Point(374, 281);
+            this.tbY6.Location = new System.Drawing.Point(374, 314);
             this.tbY6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY6.Name = "tbY6";
             this.tbY6.Size = new System.Drawing.Size(64, 27);
@@ -455,7 +518,7 @@
             // 
             // tbH6
             // 
-            this.tbH6.Location = new System.Drawing.Point(156, 281);
+            this.tbH6.Location = new System.Drawing.Point(156, 314);
             this.tbH6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH6.Name = "tbH6";
             this.tbH6.Size = new System.Drawing.Size(64, 27);
@@ -465,7 +528,7 @@
             // 
             // tbStr5
             // 
-            this.tbStr5.Location = new System.Drawing.Point(9, 244);
+            this.tbStr5.Location = new System.Drawing.Point(9, 277);
             this.tbStr5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr5.Name = "tbStr5";
             this.tbStr5.Size = new System.Drawing.Size(139, 27);
@@ -475,7 +538,7 @@
             // 
             // tbX5
             // 
-            this.tbX5.Location = new System.Drawing.Point(302, 244);
+            this.tbX5.Location = new System.Drawing.Point(302, 277);
             this.tbX5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX5.Name = "tbX5";
             this.tbX5.Size = new System.Drawing.Size(64, 27);
@@ -485,7 +548,7 @@
             // 
             // tbY5
             // 
-            this.tbY5.Location = new System.Drawing.Point(374, 244);
+            this.tbY5.Location = new System.Drawing.Point(374, 277);
             this.tbY5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY5.Name = "tbY5";
             this.tbY5.Size = new System.Drawing.Size(64, 27);
@@ -495,7 +558,7 @@
             // 
             // tbH5
             // 
-            this.tbH5.Location = new System.Drawing.Point(156, 244);
+            this.tbH5.Location = new System.Drawing.Point(156, 277);
             this.tbH5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH5.Name = "tbH5";
             this.tbH5.Size = new System.Drawing.Size(64, 27);
@@ -505,7 +568,7 @@
             // 
             // tbStr4
             // 
-            this.tbStr4.Location = new System.Drawing.Point(9, 207);
+            this.tbStr4.Location = new System.Drawing.Point(9, 240);
             this.tbStr4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr4.Name = "tbStr4";
             this.tbStr4.Size = new System.Drawing.Size(139, 27);
@@ -515,7 +578,7 @@
             // 
             // tbX4
             // 
-            this.tbX4.Location = new System.Drawing.Point(302, 207);
+            this.tbX4.Location = new System.Drawing.Point(302, 240);
             this.tbX4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX4.Name = "tbX4";
             this.tbX4.Size = new System.Drawing.Size(64, 27);
@@ -525,7 +588,7 @@
             // 
             // tbY4
             // 
-            this.tbY4.Location = new System.Drawing.Point(374, 207);
+            this.tbY4.Location = new System.Drawing.Point(374, 240);
             this.tbY4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY4.Name = "tbY4";
             this.tbY4.Size = new System.Drawing.Size(64, 27);
@@ -535,7 +598,7 @@
             // 
             // tbH4
             // 
-            this.tbH4.Location = new System.Drawing.Point(156, 207);
+            this.tbH4.Location = new System.Drawing.Point(156, 240);
             this.tbH4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH4.Name = "tbH4";
             this.tbH4.Size = new System.Drawing.Size(64, 27);
@@ -545,7 +608,7 @@
             // 
             // tbStr3
             // 
-            this.tbStr3.Location = new System.Drawing.Point(9, 170);
+            this.tbStr3.Location = new System.Drawing.Point(9, 203);
             this.tbStr3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr3.Name = "tbStr3";
             this.tbStr3.Size = new System.Drawing.Size(139, 27);
@@ -555,7 +618,7 @@
             // 
             // tbX3
             // 
-            this.tbX3.Location = new System.Drawing.Point(302, 170);
+            this.tbX3.Location = new System.Drawing.Point(302, 203);
             this.tbX3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX3.Name = "tbX3";
             this.tbX3.Size = new System.Drawing.Size(64, 27);
@@ -565,7 +628,7 @@
             // 
             // tbY3
             // 
-            this.tbY3.Location = new System.Drawing.Point(374, 170);
+            this.tbY3.Location = new System.Drawing.Point(374, 203);
             this.tbY3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY3.Name = "tbY3";
             this.tbY3.Size = new System.Drawing.Size(64, 27);
@@ -575,7 +638,7 @@
             // 
             // tbH3
             // 
-            this.tbH3.Location = new System.Drawing.Point(156, 170);
+            this.tbH3.Location = new System.Drawing.Point(156, 203);
             this.tbH3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH3.Name = "tbH3";
             this.tbH3.Size = new System.Drawing.Size(64, 27);
@@ -585,7 +648,7 @@
             // 
             // tbStr2
             // 
-            this.tbStr2.Location = new System.Drawing.Point(9, 133);
+            this.tbStr2.Location = new System.Drawing.Point(9, 166);
             this.tbStr2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr2.Name = "tbStr2";
             this.tbStr2.Size = new System.Drawing.Size(139, 27);
@@ -595,7 +658,7 @@
             // 
             // tbX2
             // 
-            this.tbX2.Location = new System.Drawing.Point(302, 133);
+            this.tbX2.Location = new System.Drawing.Point(302, 166);
             this.tbX2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX2.Name = "tbX2";
             this.tbX2.Size = new System.Drawing.Size(64, 27);
@@ -605,7 +668,7 @@
             // 
             // tbY2
             // 
-            this.tbY2.Location = new System.Drawing.Point(374, 133);
+            this.tbY2.Location = new System.Drawing.Point(374, 166);
             this.tbY2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY2.Name = "tbY2";
             this.tbY2.Size = new System.Drawing.Size(64, 27);
@@ -615,7 +678,7 @@
             // 
             // tbH2
             // 
-            this.tbH2.Location = new System.Drawing.Point(156, 133);
+            this.tbH2.Location = new System.Drawing.Point(156, 166);
             this.tbH2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH2.Name = "tbH2";
             this.tbH2.Size = new System.Drawing.Size(64, 27);
@@ -744,66 +807,55 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "パターン：";
             // 
-            // tbW10
+            // tbW11
             // 
-            this.tbW10.Enabled = false;
-            this.tbW10.Location = new System.Drawing.Point(228, 96);
-            this.tbW10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbW10.Name = "tbW10";
-            this.tbW10.Size = new System.Drawing.Size(64, 27);
-            this.tbW10.TabIndex = 51;
-            this.tbW10.Text = "15";
-            this.tbW10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.tbW11.Enabled = false;
+            this.tbW11.Location = new System.Drawing.Point(228, 131);
+            this.tbW11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbW11.Name = "tbW11";
+            this.tbW11.Size = new System.Drawing.Size(64, 27);
+            this.tbW11.TabIndex = 56;
+            this.tbW11.Text = "120";
+            this.tbW11.Click += new System.EventHandler(this.btnHyouji_Click);
             // 
-            // tbStr10
+            // tbX11
             // 
-            this.tbStr10.Enabled = false;
-            this.tbStr10.Location = new System.Drawing.Point(8, 96);
-            this.tbStr10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbStr10.Name = "tbStr10";
-            this.tbStr10.Size = new System.Drawing.Size(139, 27);
-            this.tbStr10.TabIndex = 47;
-            this.tbStr10.Text = "縦文字";
-            this.tbStr10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.tbX11.Enabled = false;
+            this.tbX11.Location = new System.Drawing.Point(302, 131);
+            this.tbX11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbX11.Name = "tbX11";
+            this.tbX11.Size = new System.Drawing.Size(64, 27);
+            this.tbX11.TabIndex = 54;
+            this.tbX11.Text = "52";
+            this.tbX11.Click += new System.EventHandler(this.btnHyouji_Click);
             // 
-            // tbX10
+            // tbY11
             // 
-            this.tbX10.Enabled = false;
-            this.tbX10.Location = new System.Drawing.Point(302, 96);
-            this.tbX10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbX10.Name = "tbX10";
-            this.tbX10.Size = new System.Drawing.Size(64, 27);
-            this.tbX10.TabIndex = 49;
-            this.tbX10.Text = "5";
-            this.tbX10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.tbY11.Enabled = false;
+            this.tbY11.Location = new System.Drawing.Point(374, 131);
+            this.tbY11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbY11.Name = "tbY11";
+            this.tbY11.Size = new System.Drawing.Size(64, 27);
+            this.tbY11.TabIndex = 55;
+            this.tbY11.Text = "220";
+            this.tbY11.Click += new System.EventHandler(this.btnHyouji_Click);
             // 
-            // tbY10
+            // tbH11
             // 
-            this.tbY10.Enabled = false;
-            this.tbY10.Location = new System.Drawing.Point(374, 96);
-            this.tbY10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbY10.Name = "tbY10";
-            this.tbY10.Size = new System.Drawing.Size(64, 27);
-            this.tbY10.TabIndex = 50;
-            this.tbY10.Text = "210";
-            this.tbY10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
-            // 
-            // tbH10
-            // 
-            this.tbH10.Enabled = false;
-            this.tbH10.Location = new System.Drawing.Point(156, 96);
-            this.tbH10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbH10.Name = "tbH10";
-            this.tbH10.Size = new System.Drawing.Size(64, 27);
-            this.tbH10.TabIndex = 48;
-            this.tbH10.Text = "50";
-            this.tbH10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.tbH11.Enabled = false;
+            this.tbH11.Location = new System.Drawing.Point(156, 131);
+            this.tbH11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbH11.Name = "tbH11";
+            this.tbH11.Size = new System.Drawing.Size(64, 27);
+            this.tbH11.TabIndex = 53;
+            this.tbH11.Text = "3";
+            this.tbH11.Click += new System.EventHandler(this.btnHyouji_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 459);
+            this.ClientSize = new System.Drawing.Size(930, 493);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbPattern);
@@ -892,6 +944,10 @@
         private System.Windows.Forms.TextBox tbX10;
         private System.Windows.Forms.TextBox tbY10;
         private System.Windows.Forms.TextBox tbH10;
+        private System.Windows.Forms.TextBox tbW11;
+        private System.Windows.Forms.TextBox tbX11;
+        private System.Windows.Forms.TextBox tbY11;
+        private System.Windows.Forms.TextBox tbH11;
     }
 }
 

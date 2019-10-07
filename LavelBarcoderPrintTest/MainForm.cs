@@ -41,6 +41,13 @@ namespace LavelBarcoderPrintTest
                     return;
                 }
             }
+
+            //縦文字枠線設定
+            tbH11.Text = (int.Parse(tbX10.Text) - 2).ToString();
+            tbY11.Text = (int.Parse(tbY10.Text) + 10).ToString();
+            tbX11.Text = (int.Parse(tbH10.Text) + int.Parse(tbH11.Text) + int.Parse(tbX10.Text) + 2).ToString();
+            tbW11.Text = (int.Parse(tbY10.Text) - int.Parse(tbW10.Text) * 6).ToString();
+
             //stringList.Clear();
             //stringList.Add(tbStr1.Text);
             //stringList.Add(tbStr2.Text);
@@ -85,6 +92,7 @@ namespace LavelBarcoderPrintTest
             attributeList.AddRange(new int[] { int.Parse(tbH8.Text), int.Parse(tbW8.Text), int.Parse(tbX8.Text), int.Parse(tbY8.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH9.Text), int.Parse(tbW9.Text), int.Parse(tbX9.Text), int.Parse(tbY9.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH10.Text), int.Parse(tbW10.Text), int.Parse(tbX10.Text), int.Parse(tbY10.Text) });
+            attributeList.AddRange(new int[] { int.Parse(tbH11.Text), int.Parse(tbW11.Text), int.Parse(tbX11.Text), int.Parse(tbY11.Text) });
 
             B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, "NW-7", stringList, attributeList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
@@ -121,6 +129,10 @@ namespace LavelBarcoderPrintTest
                 tbW10.Enabled = false;
                 tbX10.Enabled = false;
                 tbY10.Enabled = false;
+                tbH11.Enabled = false;
+                tbW11.Enabled = false;
+                tbX11.Enabled = false;
+                tbY11.Enabled = false;
             }
             else if (((ComboBox)sender).Text == "B")
             {
@@ -136,6 +148,10 @@ namespace LavelBarcoderPrintTest
                 tbW10.Enabled = true;
                 tbX10.Enabled = true;
                 tbY10.Enabled = true;
+                tbH11.Enabled = true;
+                tbW11.Enabled = true;
+                tbX11.Enabled = true;
+                tbY11.Enabled = true;
             }
         }
     }
