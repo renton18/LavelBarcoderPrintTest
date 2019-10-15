@@ -14,7 +14,8 @@ namespace LavelBarcoderPrintTest
         }
 
         List<int> attributeList = new List<int>();
-        List<string> stringList = new List<string>();
+        //List<string> sourceList = new List<string>();
+        List<string[]> stringList = new List<string[]>();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,7 +28,7 @@ namespace LavelBarcoderPrintTest
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, new DataTable(), "NW-7", stringList, attributeList);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, new DataTable(), stringList, attributeList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
             b_ev4D.Print();
         }
@@ -46,20 +47,11 @@ namespace LavelBarcoderPrintTest
             tbH11.Text = (int.Parse(tbX10.Text) - 2).ToString();
             tbY11.Text = (int.Parse(tbY10.Text) + 10).ToString();
             tbX11.Text = (int.Parse(tbH10.Text) + int.Parse(tbH11.Text) + int.Parse(tbX10.Text) + 2).ToString();
-            tbW11.Text = (int.Parse(tbY10.Text) - int.Parse(tbW10.Text) * 6).ToString();
+            tbW11.Text = (int.Parse(tbY10.Text) - int.Parse(tbW10.Text) * 8).ToString();
 
-            //stringList.Clear();
-            //stringList.Add(tbStr1.Text);
-            //stringList.Add(tbStr2.Text);
-            //stringList.Add(tbStr3.Text);
-            //stringList.Add(tbStr4.Text);
-            //stringList.Add(tbStr5.Text);
-            //stringList.Add(tbStr6.Text);
-            //stringList.Add(tbStr7.Text);
-            //stringList.Add(tbStr8.Text);
-            //stringList.Add(tbStr9.Text);
+            //サンプル値
             DataTable dt = new DataTable();
-            dt.Columns.Add("Barcode");
+            dt.Columns.Add("Barcode1");
             dt.Columns.Add("str1");
             dt.Columns.Add("str2");
             dt.Columns.Add("str3");
@@ -69,6 +61,7 @@ namespace LavelBarcoderPrintTest
             dt.Columns.Add("str7");
             dt.Columns.Add("str8");
             dt.Columns.Add("str9");
+            dt.Columns.Add("Barcode2");
             DataRow row = dt.NewRow();
             row[0] = tbStr1.Text;
             row[1] = tbStr2.Text;
@@ -80,7 +73,26 @@ namespace LavelBarcoderPrintTest
             row[7] = tbStr8.Text;
             row[8] = tbStr9.Text;
             row[9] = tbStr10.Text;
+            row[10] = tbStr12.Text;
             dt.Rows.Add(row);
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // コピペ対象コード
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //表題、文字コード
+            stringList.Clear();
+            stringList.Add(new string[] { "", "Meiryo UI", "NW-7" });
+            stringList.Add(new string[] { tbHyou2.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou3.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou4.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou5.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou6.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou7.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou8.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { tbHyou9.Text, "ＭＳ ゴシック", "Meiryo UI" });
+            stringList.Add(new string[] { "", "Meiryo UI", "NW-7" });
+            stringList.Add(new string[] { "", "Meiryo UI", "NW-7" });
+            //位置情報
             attributeList.Clear();
             attributeList.AddRange(new int[] { int.Parse(tbH1.Text), int.Parse(tbW1.Text), int.Parse(tbX1.Text), int.Parse(tbY1.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH2.Text), int.Parse(tbW2.Text), int.Parse(tbX2.Text), int.Parse(tbY2.Text) });
@@ -93,16 +105,25 @@ namespace LavelBarcoderPrintTest
             attributeList.AddRange(new int[] { int.Parse(tbH9.Text), int.Parse(tbW9.Text), int.Parse(tbX9.Text), int.Parse(tbY9.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH10.Text), int.Parse(tbW10.Text), int.Parse(tbX10.Text), int.Parse(tbY10.Text) });
             attributeList.AddRange(new int[] { int.Parse(tbH11.Text), int.Parse(tbW11.Text), int.Parse(tbX11.Text), int.Parse(tbY11.Text) });
+            attributeList.AddRange(new int[] { int.Parse(tbH12.Text), int.Parse(tbW12.Text), int.Parse(tbX12.Text), int.Parse(tbY12.Text) });
+            // コピペ対象コード　ここまで
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, "NW-7", stringList, attributeList);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, stringList, attributeList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
         }
 
         private void btnCopySource_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append(@"List<string[]> stringList = new List<string[]>();" + Environment.NewLine);
             sb.Append("stringList.Clear();" + Environment.NewLine);
-            stringList.ForEach(a => sb.Append(@"stringList.Add(""" + a + @""");" + Environment.NewLine));
+            for (int i = 0; i < stringList.Count; i++)
+            {
+                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[2] + @""" " + "});" + Environment.NewLine);
+            }
+            sb.Append(Environment.NewLine);
+            sb.Append(@"List<int> attributeList = new List<int>();" + Environment.NewLine);
             sb.Append("attributeList.Clear();" + Environment.NewLine);
             for (int i = 0; i < attributeList.Count; i = i + 4)
             {
@@ -110,9 +131,8 @@ namespace LavelBarcoderPrintTest
             }
             //クリップボードにコピーする
             Clipboard.SetText(sb.ToString());
-
         }
-
+        #region パターンチェンジ
         private void cbPattern_TextChanged(object sender, EventArgs e)
         {
             if (((ComboBox)sender).Text == "A")
@@ -153,6 +173,57 @@ namespace LavelBarcoderPrintTest
                 tbX11.Enabled = true;
                 tbY11.Enabled = true;
             }
+            else if (((ComboBox)sender).Text == "C")
+            {
+                tbH1.Text = "70";
+                tbW1.Text = "28";
+                tbX1.Text = "60";
+                tbY1.Text = "100";
+
+                tbH12.Text = "50";
+                tbW12.Text = "31";
+                tbX12.Text = "15";
+                tbY12.Text = "290";
+
+                tbH5.Text = "30";
+                tbHyou3.Text = "";
+
+                tbStr3.Text = "";
+                tbHyou3.Text = "";
+                tbStr4.Text = "";
+                tbHyou4.Text = "";
+
+                tbH6.Text = "40";
+                tbW6.Text = "15";
+                tbX6.Text = "60";
+                tbY6.Text = "190";
+
+                tbH7.Text = "40";
+                tbW7.Text = "15";
+                tbX7.Text = "260";
+                tbY7.Text = "190";
+
+                tbH8.Text = "40";
+                tbW8.Text = "15";
+                tbX8.Text = "60";
+                tbY8.Text = "240";
+
+                tbH9.Text = "40";
+                tbW9.Text = "15";
+                tbX9.Text = "260";
+                tbY9.Text = "240";
+
+                tbStr10.Enabled = true;
+                tbH10.Enabled = true;
+                tbW10.Enabled = true;
+                tbX10.Enabled = true;
+                tbY10.Enabled = true;
+                tbH11.Enabled = true;
+                tbW11.Enabled = true;
+                tbX11.Enabled = true;
+                tbY11.Enabled = true;
+            }
         }
+        #endregion
     }
 }
