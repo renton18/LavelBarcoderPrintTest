@@ -13,8 +13,7 @@ namespace LavelBarcoderPrintTest
             InitializeComponent();
         }
 
-        List<int> attributeList = new List<int>();
-        //List<string> sourceList = new List<string>();
+        List<string[]> frameList = new List<string[]>();
         List<string[]> stringList = new List<string[]>();
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,26 +27,28 @@ namespace LavelBarcoderPrintTest
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, new DataTable(), stringList, attributeList);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, new DataTable(), stringList, frameList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
             b_ev4D.Print();
         }
 
         private void btnHyouji_Click(object sender, EventArgs e)
         {
-            if (!sender.GetType().Equals(typeof(Button)))
+            //if (sender.GetType().Equals(typeof(ComboBox)))
+            //{
+
+            //    if (((ComboBox)sender).Text == "")
+            //    {
+            //        return;
+            //    }
+            //}
+            if (sender.GetType().Equals(typeof(TextBox)))
             {
                 if (((TextBox)sender).Text == "")
                 {
                     return;
                 }
             }
-
-            //縦文字枠線設定
-            tbH11.Text = (int.Parse(tbX10.Text) - 2).ToString();
-            tbY11.Text = (int.Parse(tbY10.Text) + 10).ToString();
-            tbX11.Text = (int.Parse(tbH10.Text) + int.Parse(tbH11.Text) + int.Parse(tbX10.Text) + 2).ToString();
-            tbW11.Text = (int.Parse(tbY10.Text) - int.Parse(tbW10.Text) * 8).ToString();
 
             //サンプル値
             DataTable dt = new DataTable();
@@ -79,149 +80,76 @@ namespace LavelBarcoderPrintTest
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // コピペ対象コード
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //表題、文字コード
             stringList.Clear();
-            stringList.Add(new string[] { "", "Meiryo UI", "NW-7" });
-            stringList.Add(new string[] { tbHyou2.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou3.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou4.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou5.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou6.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou7.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou8.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { tbHyou9.Text, "ＭＳ ゴシック", "Meiryo UI" });
-            stringList.Add(new string[] { "", "Meiryo UI", "NW-7" });
-            stringList.Add(new string[] { "", "Meiryo UI", "NW-7" });
-            //位置情報
-            attributeList.Clear();
-            attributeList.AddRange(new int[] { int.Parse(tbH1.Text), int.Parse(tbW1.Text), int.Parse(tbX1.Text), int.Parse(tbY1.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH2.Text), int.Parse(tbW2.Text), int.Parse(tbX2.Text), int.Parse(tbY2.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH3.Text), int.Parse(tbW3.Text), int.Parse(tbX3.Text), int.Parse(tbY3.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH4.Text), int.Parse(tbW4.Text), int.Parse(tbX4.Text), int.Parse(tbY4.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH5.Text), int.Parse(tbW5.Text), int.Parse(tbX5.Text), int.Parse(tbY5.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH6.Text), int.Parse(tbW6.Text), int.Parse(tbX6.Text), int.Parse(tbY6.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH7.Text), int.Parse(tbW7.Text), int.Parse(tbX7.Text), int.Parse(tbY7.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH8.Text), int.Parse(tbW8.Text), int.Parse(tbX8.Text), int.Parse(tbY8.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH9.Text), int.Parse(tbW9.Text), int.Parse(tbX9.Text), int.Parse(tbY9.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH10.Text), int.Parse(tbW10.Text), int.Parse(tbX10.Text), int.Parse(tbY10.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH11.Text), int.Parse(tbW11.Text), int.Parse(tbX11.Text), int.Parse(tbY11.Text) });
-            attributeList.AddRange(new int[] { int.Parse(tbH12.Text), int.Parse(tbW12.Text), int.Parse(tbX12.Text), int.Parse(tbY12.Text) });
+            //文字列
+            if (tbStr1.Text.Trim() != "") stringList.Add(new string[] { tbH1.Text, tbW1.Text, tbX1.Text, tbY1.Text, tbStr1.Text, comboBox1.Text, "128", "0" });
+            if (tbStr2.Text.Trim() != "") stringList.Add(new string[] { tbH2.Text, tbW2.Text, tbX2.Text, tbY2.Text, tbStr2.Text, comboBox2.Text, "128", "0" });
+            if (tbStr3.Text.Trim() != "") stringList.Add(new string[] { tbH3.Text, tbW3.Text, tbX3.Text, tbY3.Text, tbStr3.Text, comboBox3.Text, "128", "0" });
+            if (tbStr4.Text.Trim() != "") stringList.Add(new string[] { tbH4.Text, tbW4.Text, tbX4.Text, tbY4.Text, tbStr4.Text, comboBox4.Text, "128", "0" });
+            if (tbStr5.Text.Trim() != "") stringList.Add(new string[] { tbH5.Text, tbW5.Text, tbX5.Text, tbY5.Text, tbStr5.Text, comboBox5.Text, "128", "0" });
+            if (tbStr6.Text.Trim() != "") stringList.Add(new string[] { tbH6.Text, tbW6.Text, tbX6.Text, tbY6.Text, tbStr6.Text, comboBox6.Text, "128", "0" });
+            if (tbStr7.Text.Trim() != "") stringList.Add(new string[] { tbH7.Text, tbW7.Text, tbX7.Text, tbY7.Text, tbStr7.Text, comboBox7.Text, "128", "0" });
+            if (tbStr8.Text.Trim() != "") stringList.Add(new string[] { tbH8.Text, tbW8.Text, tbX8.Text, tbY8.Text, tbStr8.Text, comboBox8.Text, "128", "0" });
+            if (tbStr9.Text.Trim() != "") stringList.Add(new string[] { tbH9.Text, tbW9.Text, tbX9.Text, tbY9.Text, tbStr9.Text, comboBox9.Text, "128", "0" });
+            if (tbStr10.Text.Trim() != "") stringList.Add(new string[] { tbH10.Text, tbW10.Text, tbX10.Text, tbY10.Text, tbStr10.Text, comboBox10.Text, "128", "0" });
+            if (tbStr11.Text.Trim() != "") stringList.Add(new string[] { tbH11.Text, tbW11.Text, tbX11.Text, tbY11.Text, tbStr11.Text, comboBox11.Text, "128", "0" });
+            if (tbStr12.Text.Trim() != "") stringList.Add(new string[] { tbH12.Text, tbW12.Text, tbX12.Text, tbY12.Text, tbStr12.Text, comboBox12.Text, "128", "0" });
+            if (tbStr13.Text.Trim() != "") stringList.Add(new string[] { tbH13.Text, tbW13.Text, tbX13.Text, tbY13.Text, tbStr13.Text, comboBox13.Text, "128", "0" });
+            if (tbStr14.Text.Trim() != "") stringList.Add(new string[] { tbH14.Text, tbW14.Text, tbX14.Text, tbY14.Text, tbStr14.Text, comboBox14.Text, "128", "0" });
+            if (tbStr15.Text.Trim() != "") stringList.Add(new string[] { tbH15.Text, tbW15.Text, tbX15.Text, tbY15.Text, tbStr15.Text, comboBox15.Text, "128", "0" });
+            if (tbStr16.Text.Trim() != "") stringList.Add(new string[] { tbH16.Text, tbW16.Text, tbX16.Text, tbY16.Text, tbStr16.Text, comboBox16.Text, "128", "0" });
+            if (tbStr17.Text.Trim() != "") stringList.Add(new string[] { tbH17.Text, tbW17.Text, tbX17.Text, tbY17.Text, tbStr17.Text, comboBox17.Text, "128", "0" });
+            if (tbStr18.Text.Trim() != "") stringList.Add(new string[] { tbH18.Text, tbW18.Text, tbX18.Text, tbY18.Text, tbStr18.Text, comboBox18.Text, "128", "0" });
+            if (tbStr19.Text.Trim() != "") stringList.Add(new string[] { tbH19.Text, tbW19.Text, tbX19.Text, tbY19.Text, tbStr19.Text, comboBox19.Text, "128", "0" });
+            if (tbStr20.Text.Trim() != "") stringList.Add(new string[] { tbH20.Text, tbW20.Text, tbX20.Text, tbY20.Text, tbStr20.Text, comboBox20.Text, "128", "0" });
+            //バーコード
+            if (tbStr21.Text.Trim() != "") stringList.Add(new string[] { tbH21.Text, tbW21.Text, tbX21.Text, tbY21.Text, tbStr21.Text, comboBox21.Text, "0", "0" });
+            if (tbStr22.Text.Trim() != "") stringList.Add(new string[] { tbH22.Text, tbW22.Text, tbX22.Text, tbY22.Text, tbStr22.Text, comboBox22.Text, "128", "0" });
+            if (tbStr23.Text.Trim() != "") stringList.Add(new string[] { tbH23.Text, tbW23.Text, tbX23.Text, tbY23.Text, tbStr23.Text, comboBox23.Text, "0", "0" });
+            if (tbStr24.Text.Trim() != "") stringList.Add(new string[] { tbH24.Text, tbW24.Text, tbX24.Text, tbY24.Text, tbStr24.Text, comboBox24.Text, "128", "0" });
+            //枠あり文字
+            if (tbStr25.Text.Trim() != "") stringList.Add(new string[] { tbH25.Text, tbW25.Text, tbX25.Text, tbY25.Text, tbStr25.Text, comboBox25.Text, "128",
+                cbVertival.Checked == true ? "900" : "0"});
+            frameList.Clear();
+            if (tbStr25.Text.Trim() != "") frameList.Add(new string[] { tbH26.Text, tbW26.Text, tbX26.Text, tbY26.Text });
+
+
             // コピペ対象コード　ここまで
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, stringList, attributeList);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, stringList, frameList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
         }
 
+        #region ソースコピー
         private void btnCopySource_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"List<string[]> stringList = new List<string[]>();" + Environment.NewLine);
-            sb.Append("stringList.Clear();" + Environment.NewLine);
+            //sb.Append("stringList.Clear();" + Environment.NewLine);
             for (int i = 0; i < stringList.Count; i++)
             {
-                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[2] + @""" " + "});" + Environment.NewLine);
+                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[2] + @""", """ + stringList[i][3] + @""", """  + stringList[i][5] + @""", """ + stringList[i][6] + @""", """ + stringList[i][7] + @""" " + "});" + Environment.NewLine);
             }
+
             sb.Append(Environment.NewLine);
-            sb.Append(@"List<int> attributeList = new List<int>();" + Environment.NewLine);
-            sb.Append("attributeList.Clear();" + Environment.NewLine);
-            for (int i = 0; i < attributeList.Count; i = i + 4)
+            sb.Append(@"List<string[]> frameList = new List<string[]>();" + Environment.NewLine);
+            //sb.Append("frameList.Clear();" + Environment.NewLine);
+            for (int i = 0; i < frameList.Count; i++)
             {
-                sb.Append("attributeList.AddRange(new int[] {" + attributeList[i + 0] + "," + attributeList[i + 1] + "," + attributeList[i + 2] + "," + attributeList[i + 3] + "});" + Environment.NewLine);
+                sb.Append(@"frameList.Add(new string[] {""" + frameList[i][0] + @""", """ + frameList[i][1] + @""", """ + frameList[i][2] + @""", """ + frameList[i][3] + @""" " + "});" + Environment.NewLine);
             }
+
             //クリップボードにコピーする
             Clipboard.SetText(sb.ToString());
         }
+        #endregion
+
         #region パターンチェンジ
         private void cbPattern_TextChanged(object sender, EventArgs e)
         {
             if (((ComboBox)sender).Text == "A")
             {
-                tbX4.Text = "15";
-                tbX5.Text = "220";
-                tbX6.Text = "15";
-                tbX7.Text = "220";
-                tbX8.Text = "15";
-                tbX9.Text = "220";
 
-                tbStr10.Enabled = false;
-                tbH10.Enabled = false;
-                tbW10.Enabled = false;
-                tbX10.Enabled = false;
-                tbY10.Enabled = false;
-                tbH11.Enabled = false;
-                tbW11.Enabled = false;
-                tbX11.Enabled = false;
-                tbY11.Enabled = false;
-            }
-            else if (((ComboBox)sender).Text == "B")
-            {
-                tbX4.Text = "60";
-                tbX5.Text = "260";
-                tbX6.Text = "60";
-                tbX7.Text = "260";
-                tbX8.Text = "60";
-                tbX9.Text = "260";
-
-                tbStr10.Enabled = true;
-                tbH10.Enabled = true;
-                tbW10.Enabled = true;
-                tbX10.Enabled = true;
-                tbY10.Enabled = true;
-                tbH11.Enabled = true;
-                tbW11.Enabled = true;
-                tbX11.Enabled = true;
-                tbY11.Enabled = true;
-            }
-            else if (((ComboBox)sender).Text == "C")
-            {
-                tbH1.Text = "70";
-                tbW1.Text = "28";
-                tbX1.Text = "60";
-                tbY1.Text = "100";
-
-                tbH12.Text = "50";
-                tbW12.Text = "31";
-                tbX12.Text = "15";
-                tbY12.Text = "290";
-
-                tbH5.Text = "30";
-                tbHyou3.Text = "";
-
-                tbStr3.Text = "";
-                tbHyou3.Text = "";
-                tbStr4.Text = "";
-                tbHyou4.Text = "";
-
-                tbH6.Text = "40";
-                tbW6.Text = "15";
-                tbX6.Text = "60";
-                tbY6.Text = "190";
-
-                tbH7.Text = "40";
-                tbW7.Text = "15";
-                tbX7.Text = "260";
-                tbY7.Text = "190";
-
-                tbH8.Text = "40";
-                tbW8.Text = "15";
-                tbX8.Text = "60";
-                tbY8.Text = "240";
-
-                tbH9.Text = "40";
-                tbW9.Text = "15";
-                tbX9.Text = "260";
-                tbY9.Text = "240";
-
-                tbStr10.Enabled = true;
-                tbH10.Enabled = true;
-                tbW10.Enabled = true;
-                tbX10.Enabled = true;
-                tbY10.Enabled = true;
-                tbH11.Enabled = true;
-                tbW11.Enabled = true;
-                tbX11.Enabled = true;
-                tbY11.Enabled = true;
             }
         }
         #endregion
