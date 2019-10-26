@@ -42,12 +42,14 @@ namespace LavelBarcoderPrintTest
         Bitmap canvas;
         List<string[]> stringList = new List<string[]>();
         List<string[]> frameList = new List<string[]>();
+        List<string[]> hyoudaiList = new List<string[]>();
 
         #region コンストラクタ
-        public B_EV4D_GH17_R(string printerName, DataTable dt, List<string[]> stringList, List<string[]> frameList)
+        public B_EV4D_GH17_R(string printerName, DataTable dt, List<string[]> stringList, List<string[]> frameList, List<string[]> hyoudaiList)
         {
             this.frameList = frameList;
             this.stringList = stringList;
+            this.hyoudaiList = hyoudaiList;
             this.printerName = printerName;
             this.dt = dt;
         }
@@ -126,6 +128,12 @@ namespace LavelBarcoderPrintTest
                 SetString(hdc, item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7]);
                 //本番時
                 //SetString(hdc, item[0], item[1], item[2], item[3], dt.Rows[pageCount][colCount].ToString()., item[5], item[6], item[7]);
+                colCount++;
+            }
+            colCount = 0;
+            foreach (var item in hyoudaiList)
+            {
+                SetString(hdc, item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7]);
                 colCount++;
             }
 

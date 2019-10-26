@@ -175,6 +175,26 @@
             this.tbY11 = new System.Windows.Forms.TextBox();
             this.tbH11 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.g3 = new System.Windows.Forms.GroupBox();
+            this.cbVertival = new System.Windows.Forms.CheckBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox25 = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tbW26 = new System.Windows.Forms.TextBox();
+            this.tbW25 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbStr26 = new System.Windows.Forms.TextBox();
+            this.tbX26 = new System.Windows.Forms.TextBox();
+            this.tbY26 = new System.Windows.Forms.TextBox();
+            this.tbH26 = new System.Windows.Forms.TextBox();
+            this.tbStr25 = new System.Windows.Forms.TextBox();
+            this.tbX25 = new System.Windows.Forms.TextBox();
+            this.tbY25 = new System.Windows.Forms.TextBox();
+            this.tbH25 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox21 = new System.Windows.Forms.ComboBox();
@@ -207,26 +227,26 @@
             this.tbX21 = new System.Windows.Forms.TextBox();
             this.tbY21 = new System.Windows.Forms.TextBox();
             this.tbH21 = new System.Windows.Forms.TextBox();
-            this.g3 = new System.Windows.Forms.GroupBox();
-            this.comboBox25 = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.tbW26 = new System.Windows.Forms.TextBox();
-            this.tbW25 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tbStr26 = new System.Windows.Forms.TextBox();
-            this.tbX26 = new System.Windows.Forms.TextBox();
-            this.tbY26 = new System.Windows.Forms.TextBox();
-            this.tbH26 = new System.Windows.Forms.TextBox();
-            this.tbStr25 = new System.Windows.Forms.TextBox();
-            this.tbX25 = new System.Windows.Forms.TextBox();
-            this.tbY25 = new System.Windows.Forms.TextBox();
-            this.tbH25 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.cbVertival = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.g1.SuspendLayout();
             this.g4.SuspendLayout();
@@ -234,14 +254,14 @@
             this.tabPage2.SuspendLayout();
             this.g2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.g3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.g3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btPrint
             // 
-            this.btPrint.Location = new System.Drawing.Point(914, 9);
+            this.btPrint.Location = new System.Drawing.Point(953, 12);
             this.btPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btPrint.Name = "btPrint";
             this.btPrint.Size = new System.Drawing.Size(80, 35);
@@ -253,7 +273,7 @@
             // cbPrinter
             // 
             this.cbPrinter.FormattingEnabled = true;
-            this.cbPrinter.Location = new System.Drawing.Point(615, 14);
+            this.cbPrinter.Location = new System.Drawing.Point(654, 17);
             this.cbPrinter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPrinter.Name = "cbPrinter";
             this.cbPrinter.Size = new System.Drawing.Size(126, 27);
@@ -261,7 +281,7 @@
             // 
             // btnHyouji
             // 
-            this.btnHyouji.Location = new System.Drawing.Point(749, 8);
+            this.btnHyouji.Location = new System.Drawing.Point(788, 11);
             this.btnHyouji.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHyouji.Name = "btnHyouji";
             this.btnHyouji.Size = new System.Drawing.Size(61, 35);
@@ -274,7 +294,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(544, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(586, 97);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(450, 350);
@@ -283,6 +303,16 @@
             // 
             // g1
             // 
+            this.g1.Controls.Add(this.label36);
+            this.g1.Controls.Add(this.label37);
+            this.g1.Controls.Add(this.label32);
+            this.g1.Controls.Add(this.label33);
+            this.g1.Controls.Add(this.label34);
+            this.g1.Controls.Add(this.label35);
+            this.g1.Controls.Add(this.label31);
+            this.g1.Controls.Add(this.label30);
+            this.g1.Controls.Add(this.label29);
+            this.g1.Controls.Add(this.label28);
             this.g1.Controls.Add(this.comboBox10);
             this.g1.Controls.Add(this.tbW10);
             this.g1.Controls.Add(this.tbStr10);
@@ -353,7 +383,7 @@
             this.g1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.g1.Name = "g1";
             this.g1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.g1.Size = new System.Drawing.Size(481, 427);
+            this.g1.Size = new System.Drawing.Size(542, 427);
             this.g1.TabIndex = 15;
             this.g1.TabStop = false;
             // 
@@ -367,62 +397,61 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox10.Location = new System.Drawing.Point(8, 393);
+            this.comboBox10.Location = new System.Drawing.Point(70, 386);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(118, 27);
             this.comboBox10.TabIndex = 78;
-            this.comboBox10.Text = "Meiryo UI";
+            this.comboBox10.Text = "游ゴシック";
             this.comboBox10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW10
             // 
-            this.tbW10.Location = new System.Drawing.Point(328, 393);
+            this.tbW10.Location = new System.Drawing.Point(390, 386);
             this.tbW10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW10.Name = "tbW10";
             this.tbW10.Size = new System.Drawing.Size(40, 27);
             this.tbW10.TabIndex = 77;
-            this.tbW10.Text = "15";
+            this.tbW10.Text = "30";
             this.tbW10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr10
             // 
-            this.tbStr10.Location = new System.Drawing.Point(134, 393);
+            this.tbStr10.Location = new System.Drawing.Point(196, 386);
             this.tbStr10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr10.Name = "tbStr10";
             this.tbStr10.Size = new System.Drawing.Size(139, 27);
             this.tbStr10.TabIndex = 73;
-            this.tbStr10.Text = "文字列5";
             this.tbStr10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX10
             // 
-            this.tbX10.Location = new System.Drawing.Point(376, 393);
+            this.tbX10.Location = new System.Drawing.Point(438, 386);
             this.tbX10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX10.Name = "tbX10";
             this.tbX10.Size = new System.Drawing.Size(40, 27);
             this.tbX10.TabIndex = 75;
-            this.tbX10.Text = "50";
+            this.tbX10.Text = "280";
             this.tbX10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY10
             // 
-            this.tbY10.Location = new System.Drawing.Point(423, 393);
+            this.tbY10.Location = new System.Drawing.Point(485, 386);
             this.tbY10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY10.Name = "tbY10";
             this.tbY10.Size = new System.Drawing.Size(40, 27);
             this.tbY10.TabIndex = 76;
-            this.tbY10.Text = "130";
+            this.tbY10.Text = "280";
             this.tbY10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH10
             // 
-            this.tbH10.Location = new System.Drawing.Point(279, 393);
+            this.tbH10.Location = new System.Drawing.Point(341, 386);
             this.tbH10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH10.Name = "tbH10";
             this.tbH10.Size = new System.Drawing.Size(40, 27);
             this.tbH10.TabIndex = 74;
-            this.tbH10.Text = "60";
+            this.tbH10.Text = "75";
             this.tbH10.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox9
@@ -435,12 +464,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox9.Location = new System.Drawing.Point(8, 356);
+            this.comboBox9.Location = new System.Drawing.Point(70, 349);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(118, 27);
             this.comboBox9.TabIndex = 72;
-            this.comboBox9.Text = "ＭＳ Ｐゴシック";
+            this.comboBox9.Text = "游ゴシック";
             this.comboBox9.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox8
@@ -453,12 +482,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox8.Location = new System.Drawing.Point(8, 319);
+            this.comboBox8.Location = new System.Drawing.Point(70, 312);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(118, 27);
             this.comboBox8.TabIndex = 71;
-            this.comboBox8.Text = "Meiryo UI";
+            this.comboBox8.Text = "游ゴシック";
             this.comboBox8.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox7
@@ -471,12 +500,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox7.Location = new System.Drawing.Point(8, 282);
+            this.comboBox7.Location = new System.Drawing.Point(70, 275);
             this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(118, 27);
             this.comboBox7.TabIndex = 70;
-            this.comboBox7.Text = "ＭＳ Ｐゴシック";
+            this.comboBox7.Text = "游ゴシック";
             this.comboBox7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox6
@@ -489,12 +518,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox6.Location = new System.Drawing.Point(8, 245);
+            this.comboBox6.Location = new System.Drawing.Point(70, 238);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(118, 27);
             this.comboBox6.TabIndex = 69;
-            this.comboBox6.Text = "Meiryo UI";
+            this.comboBox6.Text = "游ゴシック";
             this.comboBox6.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox5
@@ -507,12 +536,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox5.Location = new System.Drawing.Point(8, 207);
+            this.comboBox5.Location = new System.Drawing.Point(70, 200);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(118, 27);
             this.comboBox5.TabIndex = 68;
-            this.comboBox5.Text = "ＭＳ Ｐゴシック";
+            this.comboBox5.Text = "游ゴシック";
             this.comboBox5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox4
@@ -525,12 +554,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox4.Location = new System.Drawing.Point(8, 171);
+            this.comboBox4.Location = new System.Drawing.Point(70, 164);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(118, 27);
             this.comboBox4.TabIndex = 67;
-            this.comboBox4.Text = "Meiryo UI";
+            this.comboBox4.Text = "游ゴシック";
             this.comboBox4.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox3
@@ -543,12 +572,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox3.Location = new System.Drawing.Point(8, 134);
+            this.comboBox3.Location = new System.Drawing.Point(70, 127);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(118, 27);
             this.comboBox3.TabIndex = 66;
-            this.comboBox3.Text = "ＭＳ Ｐゴシック";
+            this.comboBox3.Text = "游ゴシック";
             this.comboBox3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox2
@@ -561,12 +590,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox2.Location = new System.Drawing.Point(8, 97);
+            this.comboBox2.Location = new System.Drawing.Point(70, 90);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(118, 27);
             this.comboBox2.TabIndex = 65;
-            this.comboBox2.Text = "Meiryo UI";
+            this.comboBox2.Text = "游ゴシック";
             this.comboBox2.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox1
@@ -579,18 +608,18 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 60);
+            this.comboBox1.Location = new System.Drawing.Point(70, 53);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(118, 27);
             this.comboBox1.TabIndex = 64;
-            this.comboBox1.Text = "ＭＳ Ｐゴシック";
+            this.comboBox1.Text = "游ゴシック";
             this.comboBox1.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 36);
+            this.label8.Location = new System.Drawing.Point(97, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 19);
             this.label8.TabIndex = 63;
@@ -598,88 +627,88 @@
             // 
             // tbW9
             // 
-            this.tbW9.Location = new System.Drawing.Point(328, 356);
+            this.tbW9.Location = new System.Drawing.Point(390, 349);
             this.tbW9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW9.Name = "tbW9";
             this.tbW9.Size = new System.Drawing.Size(40, 27);
             this.tbW9.TabIndex = 46;
-            this.tbW9.Text = "15";
+            this.tbW9.Text = "30";
             this.tbW9.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW8
             // 
-            this.tbW8.Location = new System.Drawing.Point(328, 319);
+            this.tbW8.Location = new System.Drawing.Point(390, 312);
             this.tbW8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW8.Name = "tbW8";
             this.tbW8.Size = new System.Drawing.Size(40, 27);
             this.tbW8.TabIndex = 45;
-            this.tbW8.Text = "15";
+            this.tbW8.Text = "30";
             this.tbW8.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW7
             // 
-            this.tbW7.Location = new System.Drawing.Point(328, 282);
+            this.tbW7.Location = new System.Drawing.Point(390, 275);
             this.tbW7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW7.Name = "tbW7";
             this.tbW7.Size = new System.Drawing.Size(40, 27);
             this.tbW7.TabIndex = 44;
-            this.tbW7.Text = "15";
+            this.tbW7.Text = "30";
             this.tbW7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW6
             // 
-            this.tbW6.Location = new System.Drawing.Point(328, 245);
+            this.tbW6.Location = new System.Drawing.Point(391, 238);
             this.tbW6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW6.Name = "tbW6";
             this.tbW6.Size = new System.Drawing.Size(40, 27);
             this.tbW6.TabIndex = 42;
-            this.tbW6.Text = "15";
+            this.tbW6.Text = "30";
             this.tbW6.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW5
             // 
-            this.tbW5.Location = new System.Drawing.Point(328, 207);
+            this.tbW5.Location = new System.Drawing.Point(390, 200);
             this.tbW5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW5.Name = "tbW5";
             this.tbW5.Size = new System.Drawing.Size(40, 27);
             this.tbW5.TabIndex = 41;
-            this.tbW5.Text = "15";
+            this.tbW5.Text = "30";
             this.tbW5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW4
             // 
-            this.tbW4.Location = new System.Drawing.Point(328, 171);
+            this.tbW4.Location = new System.Drawing.Point(390, 164);
             this.tbW4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW4.Name = "tbW4";
             this.tbW4.Size = new System.Drawing.Size(40, 27);
             this.tbW4.TabIndex = 40;
-            this.tbW4.Text = "15";
+            this.tbW4.Text = "30";
             this.tbW4.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW3
             // 
-            this.tbW3.Location = new System.Drawing.Point(328, 134);
+            this.tbW3.Location = new System.Drawing.Point(390, 127);
             this.tbW3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW3.Name = "tbW3";
             this.tbW3.Size = new System.Drawing.Size(40, 27);
             this.tbW3.TabIndex = 39;
-            this.tbW3.Text = "15";
+            this.tbW3.Text = "30";
             this.tbW3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW2
             // 
-            this.tbW2.Location = new System.Drawing.Point(328, 97);
+            this.tbW2.Location = new System.Drawing.Point(390, 90);
             this.tbW2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW2.Name = "tbW2";
             this.tbW2.Size = new System.Drawing.Size(40, 27);
             this.tbW2.TabIndex = 38;
-            this.tbW2.Text = "15";
+            this.tbW2.Text = "30";
             this.tbW2.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(340, 35);
+            this.label1.Location = new System.Drawing.Point(402, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 19);
             this.label1.TabIndex = 43;
@@ -687,57 +716,56 @@
             // 
             // tbW1
             // 
-            this.tbW1.Location = new System.Drawing.Point(329, 60);
+            this.tbW1.Location = new System.Drawing.Point(391, 53);
             this.tbW1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW1.Name = "tbW1";
             this.tbW1.Size = new System.Drawing.Size(40, 27);
             this.tbW1.TabIndex = 37;
-            this.tbW1.Text = "15";
+            this.tbW1.Text = "30";
             this.tbW1.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr9
             // 
-            this.tbStr9.Location = new System.Drawing.Point(134, 356);
+            this.tbStr9.Location = new System.Drawing.Point(196, 349);
             this.tbStr9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr9.Name = "tbStr9";
             this.tbStr9.Size = new System.Drawing.Size(139, 27);
             this.tbStr9.TabIndex = 33;
-            this.tbStr9.Text = "表題5";
             this.tbStr9.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX9
             // 
-            this.tbX9.Location = new System.Drawing.Point(376, 356);
+            this.tbX9.Location = new System.Drawing.Point(438, 349);
             this.tbX9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX9.Name = "tbX9";
             this.tbX9.Size = new System.Drawing.Size(40, 27);
             this.tbX9.TabIndex = 35;
-            this.tbX9.Text = "15";
+            this.tbX9.Text = "90";
             this.tbX9.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY9
             // 
-            this.tbY9.Location = new System.Drawing.Point(423, 356);
+            this.tbY9.Location = new System.Drawing.Point(485, 349);
             this.tbY9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY9.Name = "tbY9";
             this.tbY9.Size = new System.Drawing.Size(40, 27);
             this.tbY9.TabIndex = 36;
-            this.tbY9.Text = "130";
+            this.tbY9.Text = "280";
             this.tbY9.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH9
             // 
-            this.tbH9.Location = new System.Drawing.Point(279, 356);
+            this.tbH9.Location = new System.Drawing.Point(341, 349);
             this.tbH9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH9.Name = "tbH9";
             this.tbH9.Size = new System.Drawing.Size(40, 27);
             this.tbH9.TabIndex = 34;
-            this.tbH9.Text = "20";
+            this.tbH9.Text = "75";
             this.tbH9.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr8
             // 
-            this.tbStr8.Location = new System.Drawing.Point(134, 319);
+            this.tbStr8.Location = new System.Drawing.Point(196, 312);
             this.tbStr8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr8.Name = "tbStr8";
             this.tbStr8.Size = new System.Drawing.Size(139, 27);
@@ -747,77 +775,77 @@
             // 
             // tbX8
             // 
-            this.tbX8.Location = new System.Drawing.Point(376, 319);
+            this.tbX8.Location = new System.Drawing.Point(438, 312);
             this.tbX8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX8.Name = "tbX8";
             this.tbX8.Size = new System.Drawing.Size(40, 27);
             this.tbX8.TabIndex = 31;
-            this.tbX8.Text = "270";
+            this.tbX8.Text = "280";
             this.tbX8.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY8
             // 
-            this.tbY8.Location = new System.Drawing.Point(423, 319);
+            this.tbY8.Location = new System.Drawing.Point(485, 312);
             this.tbY8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY8.Name = "tbY8";
             this.tbY8.Size = new System.Drawing.Size(40, 27);
             this.tbY8.TabIndex = 32;
-            this.tbY8.Text = "70";
+            this.tbY8.Text = "220";
             this.tbY8.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH8
             // 
-            this.tbH8.Location = new System.Drawing.Point(279, 319);
+            this.tbH8.Location = new System.Drawing.Point(341, 312);
             this.tbH8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH8.Name = "tbH8";
             this.tbH8.Size = new System.Drawing.Size(40, 27);
             this.tbH8.TabIndex = 30;
-            this.tbH8.Text = "60";
+            this.tbH8.Text = "75";
             this.tbH8.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr7
             // 
-            this.tbStr7.Location = new System.Drawing.Point(134, 282);
+            this.tbStr7.Location = new System.Drawing.Point(196, 275);
             this.tbStr7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr7.Name = "tbStr7";
             this.tbStr7.Size = new System.Drawing.Size(139, 27);
             this.tbStr7.TabIndex = 25;
-            this.tbStr7.Text = "表題4";
+            this.tbStr7.Text = "文字列4";
             this.tbStr7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX7
             // 
-            this.tbX7.Location = new System.Drawing.Point(376, 282);
+            this.tbX7.Location = new System.Drawing.Point(438, 275);
             this.tbX7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX7.Name = "tbX7";
             this.tbX7.Size = new System.Drawing.Size(40, 27);
             this.tbX7.TabIndex = 27;
-            this.tbX7.Text = "220";
+            this.tbX7.Text = "90";
             this.tbX7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY7
             // 
-            this.tbY7.Location = new System.Drawing.Point(423, 282);
+            this.tbY7.Location = new System.Drawing.Point(485, 275);
             this.tbY7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY7.Name = "tbY7";
             this.tbY7.Size = new System.Drawing.Size(40, 27);
             this.tbY7.TabIndex = 28;
-            this.tbY7.Text = "70";
+            this.tbY7.Text = "220";
             this.tbY7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH7
             // 
-            this.tbH7.Location = new System.Drawing.Point(279, 282);
+            this.tbH7.Location = new System.Drawing.Point(341, 275);
             this.tbH7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH7.Name = "tbH7";
             this.tbH7.Size = new System.Drawing.Size(40, 27);
             this.tbH7.TabIndex = 26;
-            this.tbH7.Text = "20";
+            this.tbH7.Text = "75";
             this.tbH7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr6
             // 
-            this.tbStr6.Location = new System.Drawing.Point(134, 245);
+            this.tbStr6.Location = new System.Drawing.Point(196, 238);
             this.tbStr6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr6.Name = "tbStr6";
             this.tbStr6.Size = new System.Drawing.Size(139, 27);
@@ -827,77 +855,77 @@
             // 
             // tbX6
             // 
-            this.tbX6.Location = new System.Drawing.Point(376, 245);
+            this.tbX6.Location = new System.Drawing.Point(438, 238);
             this.tbX6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX6.Name = "tbX6";
             this.tbX6.Size = new System.Drawing.Size(40, 27);
             this.tbX6.TabIndex = 23;
-            this.tbX6.Text = "50";
+            this.tbX6.Text = "280";
             this.tbX6.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY6
             // 
-            this.tbY6.Location = new System.Drawing.Point(423, 245);
+            this.tbY6.Location = new System.Drawing.Point(485, 238);
             this.tbY6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY6.Name = "tbY6";
             this.tbY6.Size = new System.Drawing.Size(40, 27);
             this.tbY6.TabIndex = 24;
-            this.tbY6.Text = "70";
+            this.tbY6.Text = "160";
             this.tbY6.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH6
             // 
-            this.tbH6.Location = new System.Drawing.Point(279, 245);
+            this.tbH6.Location = new System.Drawing.Point(341, 238);
             this.tbH6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH6.Name = "tbH6";
             this.tbH6.Size = new System.Drawing.Size(40, 27);
             this.tbH6.TabIndex = 22;
-            this.tbH6.Text = "60";
+            this.tbH6.Text = "75";
             this.tbH6.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr5
             // 
-            this.tbStr5.Location = new System.Drawing.Point(134, 207);
+            this.tbStr5.Location = new System.Drawing.Point(196, 200);
             this.tbStr5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr5.Name = "tbStr5";
             this.tbStr5.Size = new System.Drawing.Size(139, 27);
             this.tbStr5.TabIndex = 17;
-            this.tbStr5.Text = "表題3";
+            this.tbStr5.Text = "文字列3";
             this.tbStr5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX5
             // 
-            this.tbX5.Location = new System.Drawing.Point(376, 207);
+            this.tbX5.Location = new System.Drawing.Point(438, 200);
             this.tbX5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX5.Name = "tbX5";
             this.tbX5.Size = new System.Drawing.Size(40, 27);
             this.tbX5.TabIndex = 19;
-            this.tbX5.Text = "15";
+            this.tbX5.Text = "90";
             this.tbX5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY5
             // 
-            this.tbY5.Location = new System.Drawing.Point(423, 207);
+            this.tbY5.Location = new System.Drawing.Point(485, 200);
             this.tbY5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY5.Name = "tbY5";
             this.tbY5.Size = new System.Drawing.Size(40, 27);
             this.tbY5.TabIndex = 20;
-            this.tbY5.Text = "70";
+            this.tbY5.Text = "160";
             this.tbY5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH5
             // 
-            this.tbH5.Location = new System.Drawing.Point(279, 207);
+            this.tbH5.Location = new System.Drawing.Point(341, 200);
             this.tbH5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH5.Name = "tbH5";
             this.tbH5.Size = new System.Drawing.Size(40, 27);
             this.tbH5.TabIndex = 18;
-            this.tbH5.Text = "20";
+            this.tbH5.Text = "75";
             this.tbH5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr4
             // 
-            this.tbStr4.Location = new System.Drawing.Point(134, 171);
+            this.tbStr4.Location = new System.Drawing.Point(196, 164);
             this.tbStr4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr4.Name = "tbStr4";
             this.tbStr4.Size = new System.Drawing.Size(139, 27);
@@ -907,77 +935,77 @@
             // 
             // tbX4
             // 
-            this.tbX4.Location = new System.Drawing.Point(376, 171);
+            this.tbX4.Location = new System.Drawing.Point(438, 164);
             this.tbX4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX4.Name = "tbX4";
             this.tbX4.Size = new System.Drawing.Size(40, 27);
             this.tbX4.TabIndex = 15;
-            this.tbX4.Text = "270";
+            this.tbX4.Text = "280";
             this.tbX4.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY4
             // 
-            this.tbY4.Location = new System.Drawing.Point(423, 171);
+            this.tbY4.Location = new System.Drawing.Point(485, 164);
             this.tbY4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY4.Name = "tbY4";
             this.tbY4.Size = new System.Drawing.Size(40, 27);
             this.tbY4.TabIndex = 16;
-            this.tbY4.Text = "10";
+            this.tbY4.Text = "80";
             this.tbY4.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH4
             // 
-            this.tbH4.Location = new System.Drawing.Point(279, 171);
+            this.tbH4.Location = new System.Drawing.Point(341, 164);
             this.tbH4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH4.Name = "tbH4";
             this.tbH4.Size = new System.Drawing.Size(40, 27);
             this.tbH4.TabIndex = 14;
-            this.tbH4.Text = "60";
+            this.tbH4.Text = "75";
             this.tbH4.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr3
             // 
-            this.tbStr3.Location = new System.Drawing.Point(134, 134);
+            this.tbStr3.Location = new System.Drawing.Point(196, 127);
             this.tbStr3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr3.Name = "tbStr3";
             this.tbStr3.Size = new System.Drawing.Size(139, 27);
             this.tbStr3.TabIndex = 9;
-            this.tbStr3.Text = "表題2";
+            this.tbStr3.Text = "文字列2";
             this.tbStr3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX3
             // 
-            this.tbX3.Location = new System.Drawing.Point(376, 134);
+            this.tbX3.Location = new System.Drawing.Point(438, 127);
             this.tbX3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX3.Name = "tbX3";
             this.tbX3.Size = new System.Drawing.Size(40, 27);
             this.tbX3.TabIndex = 11;
-            this.tbX3.Text = "220";
+            this.tbX3.Text = "90";
             this.tbX3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY3
             // 
-            this.tbY3.Location = new System.Drawing.Point(423, 134);
+            this.tbY3.Location = new System.Drawing.Point(485, 127);
             this.tbY3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY3.Name = "tbY3";
             this.tbY3.Size = new System.Drawing.Size(40, 27);
             this.tbY3.TabIndex = 12;
-            this.tbY3.Text = "10";
+            this.tbY3.Text = "80";
             this.tbY3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH3
             // 
-            this.tbH3.Location = new System.Drawing.Point(279, 134);
+            this.tbH3.Location = new System.Drawing.Point(341, 127);
             this.tbH3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH3.Name = "tbH3";
             this.tbH3.Size = new System.Drawing.Size(40, 27);
             this.tbH3.TabIndex = 10;
-            this.tbH3.Text = "20";
+            this.tbH3.Text = "75";
             this.tbH3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr2
             // 
-            this.tbStr2.Location = new System.Drawing.Point(134, 97);
+            this.tbStr2.Location = new System.Drawing.Point(196, 90);
             this.tbStr2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr2.Name = "tbStr2";
             this.tbStr2.Size = new System.Drawing.Size(139, 27);
@@ -987,17 +1015,17 @@
             // 
             // tbX2
             // 
-            this.tbX2.Location = new System.Drawing.Point(376, 97);
+            this.tbX2.Location = new System.Drawing.Point(438, 90);
             this.tbX2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX2.Name = "tbX2";
             this.tbX2.Size = new System.Drawing.Size(40, 27);
             this.tbX2.TabIndex = 7;
-            this.tbX2.Text = "50";
+            this.tbX2.Text = "280";
             this.tbX2.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY2
             // 
-            this.tbY2.Location = new System.Drawing.Point(423, 97);
+            this.tbY2.Location = new System.Drawing.Point(485, 90);
             this.tbY2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY2.Name = "tbY2";
             this.tbY2.Size = new System.Drawing.Size(40, 27);
@@ -1007,18 +1035,18 @@
             // 
             // tbH2
             // 
-            this.tbH2.Location = new System.Drawing.Point(279, 97);
+            this.tbH2.Location = new System.Drawing.Point(341, 90);
             this.tbH2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH2.Name = "tbH2";
             this.tbH2.Size = new System.Drawing.Size(40, 27);
             this.tbH2.TabIndex = 6;
-            this.tbH2.Text = "60";
+            this.tbH2.Text = "75";
             this.tbH2.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(438, 35);
+            this.label5.Location = new System.Drawing.Point(500, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 19);
             this.label5.TabIndex = 24;
@@ -1027,7 +1055,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(386, 35);
+            this.label4.Location = new System.Drawing.Point(448, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 19);
             this.label4.TabIndex = 23;
@@ -1036,7 +1064,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(284, 35);
+            this.label3.Location = new System.Drawing.Point(346, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 19);
             this.label3.TabIndex = 22;
@@ -1045,7 +1073,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 35);
+            this.label2.Location = new System.Drawing.Point(236, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 19);
             this.label2.TabIndex = 21;
@@ -1053,27 +1081,27 @@
             // 
             // tbStr1
             // 
-            this.tbStr1.Location = new System.Drawing.Point(134, 60);
+            this.tbStr1.Location = new System.Drawing.Point(196, 53);
             this.tbStr1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr1.Name = "tbStr1";
             this.tbStr1.Size = new System.Drawing.Size(139, 27);
             this.tbStr1.TabIndex = 1;
-            this.tbStr1.Text = "表題1";
+            this.tbStr1.Text = "文字列1";
             this.tbStr1.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX1
             // 
-            this.tbX1.Location = new System.Drawing.Point(377, 60);
+            this.tbX1.Location = new System.Drawing.Point(439, 53);
             this.tbX1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX1.Name = "tbX1";
             this.tbX1.Size = new System.Drawing.Size(40, 27);
             this.tbX1.TabIndex = 3;
-            this.tbX1.Text = "15";
+            this.tbX1.Text = "90";
             this.tbX1.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY1
             // 
-            this.tbY1.Location = new System.Drawing.Point(424, 60);
+            this.tbY1.Location = new System.Drawing.Point(486, 53);
             this.tbY1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY1.Name = "tbY1";
             this.tbY1.Size = new System.Drawing.Size(40, 27);
@@ -1083,17 +1111,17 @@
             // 
             // tbH1
             // 
-            this.tbH1.Location = new System.Drawing.Point(280, 60);
+            this.tbH1.Location = new System.Drawing.Point(342, 53);
             this.tbH1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH1.Name = "tbH1";
             this.tbH1.Size = new System.Drawing.Size(40, 27);
             this.tbH1.TabIndex = 2;
-            this.tbH1.Text = "20";
+            this.tbH1.Text = "75";
             this.tbH1.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // btnCopySource
             // 
-            this.btnCopySource.Location = new System.Drawing.Point(817, 9);
+            this.btnCopySource.Location = new System.Drawing.Point(856, 12);
             this.btnCopySource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCopySource.Name = "btnCopySource";
             this.btnCopySource.Size = new System.Drawing.Size(89, 35);
@@ -1110,7 +1138,7 @@
             "B",
             "C",
             "D"});
-            this.cbPattern.Location = new System.Drawing.Point(615, 54);
+            this.cbPattern.Location = new System.Drawing.Point(654, 57);
             this.cbPattern.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPattern.Name = "cbPattern";
             this.cbPattern.Size = new System.Drawing.Size(126, 27);
@@ -1121,7 +1149,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(543, 16);
+            this.label6.Location = new System.Drawing.Point(582, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 47;
@@ -1130,7 +1158,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(543, 57);
+            this.label7.Location = new System.Drawing.Point(582, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 19);
             this.label7.TabIndex = 48;
@@ -1138,7 +1166,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(749, 49);
+            this.btnSave.Location = new System.Drawing.Point(788, 52);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(61, 35);
@@ -1155,7 +1183,7 @@
             this.g4.Location = new System.Drawing.Point(12, 8);
             this.g4.Name = "g4";
             this.g4.SelectedIndex = 0;
-            this.g4.Size = new System.Drawing.Size(512, 475);
+            this.g4.Size = new System.Drawing.Size(564, 475);
             this.g4.TabIndex = 50;
             // 
             // tabPage1
@@ -1164,7 +1192,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(504, 443);
+            this.tabPage1.Size = new System.Drawing.Size(556, 443);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "横文字1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1175,13 +1203,23 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(504, 443);
+            this.tabPage2.Size = new System.Drawing.Size(556, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "横文字2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // g2
             // 
+            this.g2.Controls.Add(this.label38);
+            this.g2.Controls.Add(this.label39);
+            this.g2.Controls.Add(this.label40);
+            this.g2.Controls.Add(this.label41);
+            this.g2.Controls.Add(this.label42);
+            this.g2.Controls.Add(this.label43);
+            this.g2.Controls.Add(this.label44);
+            this.g2.Controls.Add(this.label45);
+            this.g2.Controls.Add(this.label46);
+            this.g2.Controls.Add(this.label47);
             this.g2.Controls.Add(this.comboBox11);
             this.g2.Controls.Add(this.tbW20);
             this.g2.Controls.Add(this.tbStr20);
@@ -1252,7 +1290,7 @@
             this.g2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.g2.Name = "g2";
             this.g2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.g2.Size = new System.Drawing.Size(481, 427);
+            this.g2.Size = new System.Drawing.Size(542, 427);
             this.g2.TabIndex = 16;
             this.g2.TabStop = false;
             // 
@@ -1266,27 +1304,27 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox11.Location = new System.Drawing.Point(8, 60);
+            this.comboBox11.Location = new System.Drawing.Point(69, 53);
             this.comboBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(118, 27);
             this.comboBox11.TabIndex = 78;
-            this.comboBox11.Text = "ＭＳ Ｐゴシック";
+            this.comboBox11.Text = "Meiryo UI";
             this.comboBox11.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW20
             // 
-            this.tbW20.Location = new System.Drawing.Point(328, 393);
+            this.tbW20.Location = new System.Drawing.Point(389, 386);
             this.tbW20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW20.Name = "tbW20";
             this.tbW20.Size = new System.Drawing.Size(40, 27);
             this.tbW20.TabIndex = 77;
-            this.tbW20.Text = "15";
+            this.tbW20.Text = "10";
             this.tbW20.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr20
             // 
-            this.tbStr20.Location = new System.Drawing.Point(134, 393);
+            this.tbStr20.Location = new System.Drawing.Point(195, 386);
             this.tbStr20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr20.Name = "tbStr20";
             this.tbStr20.Size = new System.Drawing.Size(139, 27);
@@ -1295,32 +1333,32 @@
             // 
             // tbX20
             // 
-            this.tbX20.Location = new System.Drawing.Point(376, 393);
+            this.tbX20.Location = new System.Drawing.Point(437, 386);
             this.tbX20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX20.Name = "tbX20";
             this.tbX20.Size = new System.Drawing.Size(40, 27);
             this.tbX20.TabIndex = 75;
-            this.tbX20.Text = "220";
+            this.tbX20.Text = "230";
             this.tbX20.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY20
             // 
-            this.tbY20.Location = new System.Drawing.Point(423, 393);
+            this.tbY20.Location = new System.Drawing.Point(484, 386);
             this.tbY20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY20.Name = "tbY20";
             this.tbY20.Size = new System.Drawing.Size(40, 27);
             this.tbY20.TabIndex = 76;
-            this.tbY20.Text = "190";
+            this.tbY20.Text = "250";
             this.tbY20.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH20
             // 
-            this.tbH20.Location = new System.Drawing.Point(279, 393);
+            this.tbH20.Location = new System.Drawing.Point(340, 386);
             this.tbH20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH20.Name = "tbH20";
             this.tbH20.Size = new System.Drawing.Size(40, 27);
             this.tbH20.TabIndex = 74;
-            this.tbH20.Text = "60";
+            this.tbH20.Text = "50";
             this.tbH20.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox12
@@ -1333,7 +1371,7 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox12.Location = new System.Drawing.Point(8, 97);
+            this.comboBox12.Location = new System.Drawing.Point(69, 90);
             this.comboBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(118, 27);
@@ -1351,12 +1389,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox13.Location = new System.Drawing.Point(8, 134);
+            this.comboBox13.Location = new System.Drawing.Point(69, 127);
             this.comboBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(118, 27);
             this.comboBox13.TabIndex = 71;
-            this.comboBox13.Text = "ＭＳ Ｐゴシック";
+            this.comboBox13.Text = "Meiryo UI";
             this.comboBox13.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox14
@@ -1369,7 +1407,7 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox14.Location = new System.Drawing.Point(8, 171);
+            this.comboBox14.Location = new System.Drawing.Point(69, 164);
             this.comboBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(118, 27);
@@ -1387,12 +1425,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox15.Location = new System.Drawing.Point(8, 207);
+            this.comboBox15.Location = new System.Drawing.Point(69, 200);
             this.comboBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(118, 27);
             this.comboBox15.TabIndex = 69;
-            this.comboBox15.Text = "ＭＳ Ｐゴシック";
+            this.comboBox15.Text = "Meiryo UI";
             this.comboBox15.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox16
@@ -1405,7 +1443,7 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox16.Location = new System.Drawing.Point(8, 245);
+            this.comboBox16.Location = new System.Drawing.Point(69, 238);
             this.comboBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(118, 27);
@@ -1423,12 +1461,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox17.Location = new System.Drawing.Point(8, 282);
+            this.comboBox17.Location = new System.Drawing.Point(69, 275);
             this.comboBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(118, 27);
             this.comboBox17.TabIndex = 67;
-            this.comboBox17.Text = "ＭＳ Ｐゴシック";
+            this.comboBox17.Text = "Meiryo UI";
             this.comboBox17.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox18
@@ -1441,7 +1479,7 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox18.Location = new System.Drawing.Point(8, 319);
+            this.comboBox18.Location = new System.Drawing.Point(69, 312);
             this.comboBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(118, 27);
@@ -1459,12 +1497,12 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox19.Location = new System.Drawing.Point(8, 356);
+            this.comboBox19.Location = new System.Drawing.Point(69, 349);
             this.comboBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(118, 27);
             this.comboBox19.TabIndex = 65;
-            this.comboBox19.Text = "ＭＳ Ｐゴシック";
+            this.comboBox19.Text = "Meiryo UI";
             this.comboBox19.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // comboBox20
@@ -1477,7 +1515,7 @@
             "ITF",
             "Code 128",
             "NW-7"});
-            this.comboBox20.Location = new System.Drawing.Point(8, 393);
+            this.comboBox20.Location = new System.Drawing.Point(69, 386);
             this.comboBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(118, 27);
@@ -1488,7 +1526,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 36);
+            this.label9.Location = new System.Drawing.Point(96, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 19);
             this.label9.TabIndex = 63;
@@ -1496,88 +1534,88 @@
             // 
             // tbW19
             // 
-            this.tbW19.Location = new System.Drawing.Point(328, 356);
+            this.tbW19.Location = new System.Drawing.Point(389, 349);
             this.tbW19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW19.Name = "tbW19";
             this.tbW19.Size = new System.Drawing.Size(40, 27);
             this.tbW19.TabIndex = 46;
-            this.tbW19.Text = "15";
+            this.tbW19.Text = "10";
             this.tbW19.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW18
             // 
-            this.tbW18.Location = new System.Drawing.Point(328, 319);
+            this.tbW18.Location = new System.Drawing.Point(389, 312);
             this.tbW18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW18.Name = "tbW18";
             this.tbW18.Size = new System.Drawing.Size(40, 27);
             this.tbW18.TabIndex = 45;
-            this.tbW18.Text = "15";
+            this.tbW18.Text = "10";
             this.tbW18.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW17
             // 
-            this.tbW17.Location = new System.Drawing.Point(328, 282);
+            this.tbW17.Location = new System.Drawing.Point(389, 275);
             this.tbW17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW17.Name = "tbW17";
             this.tbW17.Size = new System.Drawing.Size(40, 27);
             this.tbW17.TabIndex = 44;
-            this.tbW17.Text = "15";
+            this.tbW17.Text = "10";
             this.tbW17.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW16
             // 
-            this.tbW16.Location = new System.Drawing.Point(328, 245);
+            this.tbW16.Location = new System.Drawing.Point(389, 238);
             this.tbW16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW16.Name = "tbW16";
             this.tbW16.Size = new System.Drawing.Size(40, 27);
             this.tbW16.TabIndex = 42;
-            this.tbW16.Text = "15";
+            this.tbW16.Text = "10";
             this.tbW16.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW15
             // 
-            this.tbW15.Location = new System.Drawing.Point(328, 207);
+            this.tbW15.Location = new System.Drawing.Point(389, 200);
             this.tbW15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW15.Name = "tbW15";
             this.tbW15.Size = new System.Drawing.Size(40, 27);
             this.tbW15.TabIndex = 41;
-            this.tbW15.Text = "15";
+            this.tbW15.Text = "10";
             this.tbW15.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW14
             // 
-            this.tbW14.Location = new System.Drawing.Point(328, 171);
+            this.tbW14.Location = new System.Drawing.Point(389, 164);
             this.tbW14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW14.Name = "tbW14";
             this.tbW14.Size = new System.Drawing.Size(40, 27);
             this.tbW14.TabIndex = 40;
-            this.tbW14.Text = "15";
+            this.tbW14.Text = "10";
             this.tbW14.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW13
             // 
-            this.tbW13.Location = new System.Drawing.Point(328, 134);
+            this.tbW13.Location = new System.Drawing.Point(389, 127);
             this.tbW13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW13.Name = "tbW13";
             this.tbW13.Size = new System.Drawing.Size(40, 27);
             this.tbW13.TabIndex = 39;
-            this.tbW13.Text = "15";
+            this.tbW13.Text = "10";
             this.tbW13.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbW12
             // 
-            this.tbW12.Location = new System.Drawing.Point(328, 97);
+            this.tbW12.Location = new System.Drawing.Point(389, 90);
             this.tbW12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW12.Name = "tbW12";
             this.tbW12.Size = new System.Drawing.Size(40, 27);
             this.tbW12.TabIndex = 38;
-            this.tbW12.Text = "15";
+            this.tbW12.Text = "10";
             this.tbW12.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(340, 35);
+            this.label10.Location = new System.Drawing.Point(401, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 19);
             this.label10.TabIndex = 43;
@@ -1585,17 +1623,17 @@
             // 
             // tbW11
             // 
-            this.tbW11.Location = new System.Drawing.Point(329, 60);
+            this.tbW11.Location = new System.Drawing.Point(390, 53);
             this.tbW11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbW11.Name = "tbW11";
             this.tbW11.Size = new System.Drawing.Size(40, 27);
             this.tbW11.TabIndex = 37;
-            this.tbW11.Text = "15";
+            this.tbW11.Text = "10";
             this.tbW11.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr19
             // 
-            this.tbStr19.Location = new System.Drawing.Point(134, 356);
+            this.tbStr19.Location = new System.Drawing.Point(195, 349);
             this.tbStr19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr19.Name = "tbStr19";
             this.tbStr19.Size = new System.Drawing.Size(139, 27);
@@ -1604,312 +1642,318 @@
             // 
             // tbX19
             // 
-            this.tbX19.Location = new System.Drawing.Point(376, 356);
+            this.tbX19.Location = new System.Drawing.Point(437, 349);
             this.tbX19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX19.Name = "tbX19";
             this.tbX19.Size = new System.Drawing.Size(40, 27);
             this.tbX19.TabIndex = 35;
-            this.tbX19.Text = "220";
+            this.tbX19.Text = "15";
             this.tbX19.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY19
             // 
-            this.tbY19.Location = new System.Drawing.Point(423, 356);
+            this.tbY19.Location = new System.Drawing.Point(484, 349);
             this.tbY19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY19.Name = "tbY19";
             this.tbY19.Size = new System.Drawing.Size(40, 27);
             this.tbY19.TabIndex = 36;
-            this.tbY19.Text = "190";
+            this.tbY19.Text = "250";
             this.tbY19.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH19
             // 
-            this.tbH19.Location = new System.Drawing.Point(279, 356);
+            this.tbH19.Location = new System.Drawing.Point(340, 349);
             this.tbH19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH19.Name = "tbH19";
             this.tbH19.Size = new System.Drawing.Size(40, 27);
             this.tbH19.TabIndex = 34;
-            this.tbH19.Text = "20";
+            this.tbH19.Text = "50";
             this.tbH19.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr18
             // 
-            this.tbStr18.Location = new System.Drawing.Point(134, 319);
+            this.tbStr18.Location = new System.Drawing.Point(195, 312);
             this.tbStr18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr18.Name = "tbStr18";
             this.tbStr18.Size = new System.Drawing.Size(139, 27);
             this.tbStr18.TabIndex = 29;
+            this.tbStr18.Text = "表題4";
             this.tbStr18.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX18
             // 
-            this.tbX18.Location = new System.Drawing.Point(376, 319);
+            this.tbX18.Location = new System.Drawing.Point(437, 312);
             this.tbX18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX18.Name = "tbX18";
             this.tbX18.Size = new System.Drawing.Size(40, 27);
             this.tbX18.TabIndex = 31;
-            this.tbX18.Text = "15";
+            this.tbX18.Text = "230";
             this.tbX18.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY18
             // 
-            this.tbY18.Location = new System.Drawing.Point(423, 319);
+            this.tbY18.Location = new System.Drawing.Point(484, 312);
             this.tbY18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY18.Name = "tbY18";
             this.tbY18.Size = new System.Drawing.Size(40, 27);
             this.tbY18.TabIndex = 32;
-            this.tbY18.Text = "190";
+            this.tbY18.Text = "200";
             this.tbY18.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH18
             // 
-            this.tbH18.Location = new System.Drawing.Point(279, 319);
+            this.tbH18.Location = new System.Drawing.Point(340, 312);
             this.tbH18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH18.Name = "tbH18";
             this.tbH18.Size = new System.Drawing.Size(40, 27);
             this.tbH18.TabIndex = 30;
-            this.tbH18.Text = "60";
+            this.tbH18.Text = "50";
             this.tbH18.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr17
             // 
-            this.tbStr17.Location = new System.Drawing.Point(134, 282);
+            this.tbStr17.Location = new System.Drawing.Point(195, 275);
             this.tbStr17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr17.Name = "tbStr17";
             this.tbStr17.Size = new System.Drawing.Size(139, 27);
             this.tbStr17.TabIndex = 25;
+            this.tbStr17.Text = "表題4";
             this.tbStr17.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX17
             // 
-            this.tbX17.Location = new System.Drawing.Point(376, 282);
+            this.tbX17.Location = new System.Drawing.Point(437, 275);
             this.tbX17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX17.Name = "tbX17";
             this.tbX17.Size = new System.Drawing.Size(40, 27);
             this.tbX17.TabIndex = 27;
-            this.tbX17.Text = "220";
+            this.tbX17.Text = "15";
             this.tbX17.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY17
             // 
-            this.tbY17.Location = new System.Drawing.Point(423, 282);
+            this.tbY17.Location = new System.Drawing.Point(484, 275);
             this.tbY17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY17.Name = "tbY17";
             this.tbY17.Size = new System.Drawing.Size(40, 27);
             this.tbY17.TabIndex = 28;
-            this.tbY17.Text = "130";
+            this.tbY17.Text = "200";
             this.tbY17.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH17
             // 
-            this.tbH17.Location = new System.Drawing.Point(279, 282);
+            this.tbH17.Location = new System.Drawing.Point(340, 275);
             this.tbH17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH17.Name = "tbH17";
             this.tbH17.Size = new System.Drawing.Size(40, 27);
             this.tbH17.TabIndex = 26;
-            this.tbH17.Text = "20";
+            this.tbH17.Text = "50";
             this.tbH17.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr16
             // 
-            this.tbStr16.Location = new System.Drawing.Point(134, 245);
+            this.tbStr16.Location = new System.Drawing.Point(195, 238);
             this.tbStr16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr16.Name = "tbStr16";
             this.tbStr16.Size = new System.Drawing.Size(139, 27);
             this.tbStr16.TabIndex = 21;
+            this.tbStr16.Text = "表題3";
             this.tbStr16.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX16
             // 
-            this.tbX16.Location = new System.Drawing.Point(376, 245);
+            this.tbX16.Location = new System.Drawing.Point(437, 238);
             this.tbX16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX16.Name = "tbX16";
             this.tbX16.Size = new System.Drawing.Size(40, 27);
             this.tbX16.TabIndex = 23;
-            this.tbX16.Text = "15";
+            this.tbX16.Text = "230";
             this.tbX16.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY16
             // 
-            this.tbY16.Location = new System.Drawing.Point(423, 245);
+            this.tbY16.Location = new System.Drawing.Point(484, 238);
             this.tbY16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY16.Name = "tbY16";
             this.tbY16.Size = new System.Drawing.Size(40, 27);
             this.tbY16.TabIndex = 24;
-            this.tbY16.Text = "130";
+            this.tbY16.Text = "140";
             this.tbY16.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH16
             // 
-            this.tbH16.Location = new System.Drawing.Point(279, 245);
+            this.tbH16.Location = new System.Drawing.Point(340, 238);
             this.tbH16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH16.Name = "tbH16";
             this.tbH16.Size = new System.Drawing.Size(40, 27);
             this.tbH16.TabIndex = 22;
-            this.tbH16.Text = "60";
+            this.tbH16.Text = "50";
             this.tbH16.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr15
             // 
-            this.tbStr15.Location = new System.Drawing.Point(134, 207);
+            this.tbStr15.Location = new System.Drawing.Point(195, 200);
             this.tbStr15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr15.Name = "tbStr15";
             this.tbStr15.Size = new System.Drawing.Size(139, 27);
             this.tbStr15.TabIndex = 17;
+            this.tbStr15.Text = "表題3";
             this.tbStr15.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX15
             // 
-            this.tbX15.Location = new System.Drawing.Point(376, 207);
+            this.tbX15.Location = new System.Drawing.Point(437, 200);
             this.tbX15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX15.Name = "tbX15";
             this.tbX15.Size = new System.Drawing.Size(40, 27);
             this.tbX15.TabIndex = 19;
-            this.tbX15.Text = "220";
+            this.tbX15.Text = "15";
             this.tbX15.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY15
             // 
-            this.tbY15.Location = new System.Drawing.Point(423, 207);
+            this.tbY15.Location = new System.Drawing.Point(484, 200);
             this.tbY15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY15.Name = "tbY15";
             this.tbY15.Size = new System.Drawing.Size(40, 27);
             this.tbY15.TabIndex = 20;
-            this.tbY15.Text = "70";
+            this.tbY15.Text = "140";
             this.tbY15.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH15
             // 
-            this.tbH15.Location = new System.Drawing.Point(279, 207);
+            this.tbH15.Location = new System.Drawing.Point(340, 200);
             this.tbH15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH15.Name = "tbH15";
             this.tbH15.Size = new System.Drawing.Size(40, 27);
             this.tbH15.TabIndex = 18;
-            this.tbH15.Text = "20";
+            this.tbH15.Text = "50";
             this.tbH15.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr14
             // 
-            this.tbStr14.Location = new System.Drawing.Point(134, 171);
+            this.tbStr14.Location = new System.Drawing.Point(195, 164);
             this.tbStr14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr14.Name = "tbStr14";
             this.tbStr14.Size = new System.Drawing.Size(139, 27);
             this.tbStr14.TabIndex = 13;
+            this.tbStr14.Text = "表題2";
             this.tbStr14.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX14
             // 
-            this.tbX14.Location = new System.Drawing.Point(376, 171);
+            this.tbX14.Location = new System.Drawing.Point(437, 164);
             this.tbX14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX14.Name = "tbX14";
             this.tbX14.Size = new System.Drawing.Size(40, 27);
             this.tbX14.TabIndex = 15;
-            this.tbX14.Text = "15";
+            this.tbX14.Text = "230";
             this.tbX14.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY14
             // 
-            this.tbY14.Location = new System.Drawing.Point(423, 171);
+            this.tbY14.Location = new System.Drawing.Point(484, 164);
             this.tbY14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY14.Name = "tbY14";
             this.tbY14.Size = new System.Drawing.Size(40, 27);
             this.tbY14.TabIndex = 16;
-            this.tbY14.Text = "70";
+            this.tbY14.Text = "80";
             this.tbY14.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH14
             // 
-            this.tbH14.Location = new System.Drawing.Point(279, 171);
+            this.tbH14.Location = new System.Drawing.Point(340, 164);
             this.tbH14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH14.Name = "tbH14";
             this.tbH14.Size = new System.Drawing.Size(40, 27);
             this.tbH14.TabIndex = 14;
-            this.tbH14.Text = "60";
+            this.tbH14.Text = "50";
             this.tbH14.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr13
             // 
-            this.tbStr13.Location = new System.Drawing.Point(134, 134);
+            this.tbStr13.Location = new System.Drawing.Point(195, 127);
             this.tbStr13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr13.Name = "tbStr13";
             this.tbStr13.Size = new System.Drawing.Size(139, 27);
             this.tbStr13.TabIndex = 9;
+            this.tbStr13.Text = "表題2";
             this.tbStr13.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX13
             // 
-            this.tbX13.Location = new System.Drawing.Point(376, 134);
+            this.tbX13.Location = new System.Drawing.Point(437, 127);
             this.tbX13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX13.Name = "tbX13";
             this.tbX13.Size = new System.Drawing.Size(40, 27);
             this.tbX13.TabIndex = 11;
-            this.tbX13.Text = "220";
+            this.tbX13.Text = "15";
             this.tbX13.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY13
             // 
-            this.tbY13.Location = new System.Drawing.Point(423, 134);
+            this.tbY13.Location = new System.Drawing.Point(484, 127);
             this.tbY13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY13.Name = "tbY13";
             this.tbY13.Size = new System.Drawing.Size(40, 27);
             this.tbY13.TabIndex = 12;
-            this.tbY13.Text = "10";
+            this.tbY13.Text = "80";
             this.tbY13.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH13
             // 
-            this.tbH13.Location = new System.Drawing.Point(279, 134);
+            this.tbH13.Location = new System.Drawing.Point(340, 127);
             this.tbH13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH13.Name = "tbH13";
             this.tbH13.Size = new System.Drawing.Size(40, 27);
             this.tbH13.TabIndex = 10;
-            this.tbH13.Text = "20";
+            this.tbH13.Text = "50";
             this.tbH13.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbStr12
             // 
-            this.tbStr12.Location = new System.Drawing.Point(134, 97);
+            this.tbStr12.Location = new System.Drawing.Point(195, 90);
             this.tbStr12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr12.Name = "tbStr12";
             this.tbStr12.Size = new System.Drawing.Size(139, 27);
             this.tbStr12.TabIndex = 5;
-            this.tbStr12.Text = "文字列1";
+            this.tbStr12.Text = "表題1";
             this.tbStr12.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX12
             // 
-            this.tbX12.Location = new System.Drawing.Point(376, 97);
+            this.tbX12.Location = new System.Drawing.Point(437, 90);
             this.tbX12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX12.Name = "tbX12";
             this.tbX12.Size = new System.Drawing.Size(40, 27);
             this.tbX12.TabIndex = 7;
-            this.tbX12.Text = "270";
+            this.tbX12.Text = "230";
             this.tbX12.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY12
             // 
-            this.tbY12.Location = new System.Drawing.Point(423, 97);
+            this.tbY12.Location = new System.Drawing.Point(484, 90);
             this.tbY12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY12.Name = "tbY12";
             this.tbY12.Size = new System.Drawing.Size(40, 27);
             this.tbY12.TabIndex = 8;
-            this.tbY12.Text = "130";
+            this.tbY12.Text = "15";
             this.tbY12.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH12
             // 
-            this.tbH12.Location = new System.Drawing.Point(279, 97);
+            this.tbH12.Location = new System.Drawing.Point(340, 90);
             this.tbH12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH12.Name = "tbH12";
             this.tbH12.Size = new System.Drawing.Size(40, 27);
             this.tbH12.TabIndex = 6;
-            this.tbH12.Text = "60";
+            this.tbH12.Text = "50";
             this.tbH12.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(438, 35);
+            this.label11.Location = new System.Drawing.Point(499, 28);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(18, 19);
             this.label11.TabIndex = 24;
@@ -1918,7 +1962,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(386, 35);
+            this.label12.Location = new System.Drawing.Point(447, 28);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(19, 19);
             this.label12.TabIndex = 23;
@@ -1927,7 +1971,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(284, 35);
+            this.label13.Location = new System.Drawing.Point(345, 28);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 19);
             this.label13.TabIndex = 22;
@@ -1936,7 +1980,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(174, 35);
+            this.label14.Location = new System.Drawing.Point(235, 28);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 19);
             this.label14.TabIndex = 21;
@@ -1944,7 +1988,7 @@
             // 
             // tbStr11
             // 
-            this.tbStr11.Location = new System.Drawing.Point(134, 60);
+            this.tbStr11.Location = new System.Drawing.Point(195, 53);
             this.tbStr11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStr11.Name = "tbStr11";
             this.tbStr11.Size = new System.Drawing.Size(139, 27);
@@ -1954,32 +1998,32 @@
             // 
             // tbX11
             // 
-            this.tbX11.Location = new System.Drawing.Point(377, 60);
+            this.tbX11.Location = new System.Drawing.Point(438, 53);
             this.tbX11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbX11.Name = "tbX11";
             this.tbX11.Size = new System.Drawing.Size(40, 27);
             this.tbX11.TabIndex = 3;
-            this.tbX11.Text = "220";
+            this.tbX11.Text = "15";
             this.tbX11.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbY11
             // 
-            this.tbY11.Location = new System.Drawing.Point(424, 60);
+            this.tbY11.Location = new System.Drawing.Point(485, 53);
             this.tbY11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbY11.Name = "tbY11";
             this.tbY11.Size = new System.Drawing.Size(40, 27);
             this.tbY11.TabIndex = 4;
-            this.tbY11.Text = "130";
+            this.tbY11.Text = "15";
             this.tbY11.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbH11
             // 
-            this.tbH11.Location = new System.Drawing.Point(280, 60);
+            this.tbH11.Location = new System.Drawing.Point(341, 53);
             this.tbH11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbH11.Name = "tbH11";
             this.tbH11.Size = new System.Drawing.Size(40, 27);
             this.tbH11.TabIndex = 2;
-            this.tbH11.Text = "20";
+            this.tbH11.Text = "50";
             this.tbH11.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tabPage3
@@ -1988,10 +2032,229 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(504, 443);
+            this.tabPage3.Size = new System.Drawing.Size(556, 443);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "枠あり文字";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // g3
+            // 
+            this.g3.Controls.Add(this.cbVertival);
+            this.g3.Controls.Add(this.label27);
+            this.g3.Controls.Add(this.comboBox25);
+            this.g3.Controls.Add(this.label21);
+            this.g3.Controls.Add(this.tbW26);
+            this.g3.Controls.Add(this.tbW25);
+            this.g3.Controls.Add(this.label22);
+            this.g3.Controls.Add(this.tbStr26);
+            this.g3.Controls.Add(this.tbX26);
+            this.g3.Controls.Add(this.tbY26);
+            this.g3.Controls.Add(this.tbH26);
+            this.g3.Controls.Add(this.tbStr25);
+            this.g3.Controls.Add(this.tbX25);
+            this.g3.Controls.Add(this.tbY25);
+            this.g3.Controls.Add(this.tbH25);
+            this.g3.Controls.Add(this.label23);
+            this.g3.Controls.Add(this.label24);
+            this.g3.Controls.Add(this.label25);
+            this.g3.Controls.Add(this.label26);
+            this.g3.Location = new System.Drawing.Point(12, 0);
+            this.g3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.g3.Name = "g3";
+            this.g3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.g3.Size = new System.Drawing.Size(481, 426);
+            this.g3.TabIndex = 18;
+            this.g3.TabStop = false;
+            // 
+            // cbVertival
+            // 
+            this.cbVertival.AutoSize = true;
+            this.cbVertival.Location = new System.Drawing.Point(13, 28);
+            this.cbVertival.Name = "cbVertival";
+            this.cbVertival.Size = new System.Drawing.Size(73, 23);
+            this.cbVertival.TabIndex = 80;
+            this.cbVertival.Text = "縦文字";
+            this.cbVertival.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(95, 133);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(24, 19);
+            this.label27.TabIndex = 79;
+            this.label27.Text = "枠";
+            // 
+            // comboBox25
+            // 
+            this.comboBox25.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBox25.FormattingEnabled = true;
+            this.comboBox25.Items.AddRange(new object[] {
+            "Meiryo UI",
+            "ＭＳ Ｐゴシック",
+            "ITF",
+            "Code 128",
+            "NW-7"});
+            this.comboBox25.Location = new System.Drawing.Point(13, 93);
+            this.comboBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox25.Name = "comboBox25";
+            this.comboBox25.Size = new System.Drawing.Size(118, 27);
+            this.comboBox25.TabIndex = 72;
+            this.comboBox25.Text = "Meiryo UI";
+            this.comboBox25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(39, 70);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(51, 19);
+            this.label21.TabIndex = 63;
+            this.label21.Text = "フォント";
+            // 
+            // tbW26
+            // 
+            this.tbW26.Location = new System.Drawing.Point(333, 130);
+            this.tbW26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbW26.Name = "tbW26";
+            this.tbW26.Size = new System.Drawing.Size(40, 27);
+            this.tbW26.TabIndex = 39;
+            this.tbW26.Text = "15";
+            this.tbW26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbW25
+            // 
+            this.tbW25.Location = new System.Drawing.Point(333, 93);
+            this.tbW25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbW25.Name = "tbW25";
+            this.tbW25.Size = new System.Drawing.Size(40, 27);
+            this.tbW25.TabIndex = 38;
+            this.tbW25.Text = "15";
+            this.tbW25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(344, 69);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 19);
+            this.label22.TabIndex = 43;
+            this.label22.Text = "幅";
+            // 
+            // tbStr26
+            // 
+            this.tbStr26.Location = new System.Drawing.Point(139, 130);
+            this.tbStr26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbStr26.Name = "tbStr26";
+            this.tbStr26.Size = new System.Drawing.Size(139, 27);
+            this.tbStr26.TabIndex = 9;
+            this.tbStr26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbX26
+            // 
+            this.tbX26.Location = new System.Drawing.Point(381, 130);
+            this.tbX26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbX26.Name = "tbX26";
+            this.tbX26.Size = new System.Drawing.Size(40, 27);
+            this.tbX26.TabIndex = 11;
+            this.tbX26.Text = "220";
+            this.tbX26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbY26
+            // 
+            this.tbY26.Location = new System.Drawing.Point(428, 130);
+            this.tbY26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbY26.Name = "tbY26";
+            this.tbY26.Size = new System.Drawing.Size(40, 27);
+            this.tbY26.TabIndex = 12;
+            this.tbY26.Text = "10";
+            this.tbY26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbH26
+            // 
+            this.tbH26.Location = new System.Drawing.Point(284, 130);
+            this.tbH26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbH26.Name = "tbH26";
+            this.tbH26.Size = new System.Drawing.Size(40, 27);
+            this.tbH26.TabIndex = 10;
+            this.tbH26.Text = "60";
+            this.tbH26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbStr25
+            // 
+            this.tbStr25.Location = new System.Drawing.Point(139, 93);
+            this.tbStr25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbStr25.Name = "tbStr25";
+            this.tbStr25.Size = new System.Drawing.Size(139, 27);
+            this.tbStr25.TabIndex = 5;
+            this.tbStr25.Text = "文字列1";
+            this.tbStr25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbX25
+            // 
+            this.tbX25.Location = new System.Drawing.Point(381, 93);
+            this.tbX25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbX25.Name = "tbX25";
+            this.tbX25.Size = new System.Drawing.Size(40, 27);
+            this.tbX25.TabIndex = 7;
+            this.tbX25.Text = "50";
+            this.tbX25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbY25
+            // 
+            this.tbY25.Location = new System.Drawing.Point(428, 93);
+            this.tbY25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbY25.Name = "tbY25";
+            this.tbY25.Size = new System.Drawing.Size(40, 27);
+            this.tbY25.TabIndex = 8;
+            this.tbY25.Text = "10";
+            this.tbY25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // tbH25
+            // 
+            this.tbH25.Location = new System.Drawing.Point(283, 93);
+            this.tbH25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbH25.Name = "tbH25";
+            this.tbH25.Size = new System.Drawing.Size(40, 27);
+            this.tbH25.TabIndex = 6;
+            this.tbH25.Text = "60";
+            this.tbH25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(442, 69);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(18, 19);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Y";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(390, 69);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(19, 19);
+            this.label24.TabIndex = 23;
+            this.label24.Text = "X";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(288, 69);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 19);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "高さ";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(178, 69);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(39, 19);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "文字";
             // 
             // tabPage4
             // 
@@ -2368,230 +2631,191 @@
             this.tbH21.Text = "90";
             this.tbH21.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
-            // g3
+            // label28
             // 
-            this.g3.Controls.Add(this.cbVertival);
-            this.g3.Controls.Add(this.label27);
-            this.g3.Controls.Add(this.comboBox25);
-            this.g3.Controls.Add(this.label21);
-            this.g3.Controls.Add(this.tbW26);
-            this.g3.Controls.Add(this.tbW25);
-            this.g3.Controls.Add(this.label22);
-            this.g3.Controls.Add(this.tbStr26);
-            this.g3.Controls.Add(this.tbX26);
-            this.g3.Controls.Add(this.tbY26);
-            this.g3.Controls.Add(this.tbH26);
-            this.g3.Controls.Add(this.tbStr25);
-            this.g3.Controls.Add(this.tbX25);
-            this.g3.Controls.Add(this.tbY25);
-            this.g3.Controls.Add(this.tbH25);
-            this.g3.Controls.Add(this.label23);
-            this.g3.Controls.Add(this.label24);
-            this.g3.Controls.Add(this.label25);
-            this.g3.Controls.Add(this.label26);
-            this.g3.Location = new System.Drawing.Point(12, 0);
-            this.g3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.g3.Name = "g3";
-            this.g3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.g3.Size = new System.Drawing.Size(481, 426);
-            this.g3.TabIndex = 18;
-            this.g3.TabStop = false;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(7, 56);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(48, 19);
+            this.label28.TabIndex = 79;
+            this.label28.Text = "1列目";
             // 
-            // comboBox25
+            // label29
             // 
-            this.comboBox25.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.comboBox25.FormattingEnabled = true;
-            this.comboBox25.Items.AddRange(new object[] {
-            "Meiryo UI",
-            "ＭＳ Ｐゴシック",
-            "ITF",
-            "Code 128",
-            "NW-7"});
-            this.comboBox25.Location = new System.Drawing.Point(13, 93);
-            this.comboBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox25.Name = "comboBox25";
-            this.comboBox25.Size = new System.Drawing.Size(118, 27);
-            this.comboBox25.TabIndex = 72;
-            this.comboBox25.Text = "Meiryo UI";
-            this.comboBox25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(7, 93);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(48, 19);
+            this.label29.TabIndex = 80;
+            this.label29.Text = "1列目";
             // 
-            // label21
+            // label30
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(39, 70);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(51, 19);
-            this.label21.TabIndex = 63;
-            this.label21.Text = "フォント";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(7, 130);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(48, 19);
+            this.label30.TabIndex = 81;
+            this.label30.Text = "2列目";
             // 
-            // tbW26
+            // label31
             // 
-            this.tbW26.Location = new System.Drawing.Point(333, 130);
-            this.tbW26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbW26.Name = "tbW26";
-            this.tbW26.Size = new System.Drawing.Size(40, 27);
-            this.tbW26.TabIndex = 39;
-            this.tbW26.Text = "15";
-            this.tbW26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(7, 167);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(48, 19);
+            this.label31.TabIndex = 82;
+            this.label31.Text = "2列目";
             // 
-            // tbW25
+            // label32
             // 
-            this.tbW25.Location = new System.Drawing.Point(333, 93);
-            this.tbW25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbW25.Name = "tbW25";
-            this.tbW25.Size = new System.Drawing.Size(40, 27);
-            this.tbW25.TabIndex = 38;
-            this.tbW25.Text = "15";
-            this.tbW25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(7, 314);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(48, 19);
+            this.label32.TabIndex = 86;
+            this.label32.Text = "4列目";
             // 
-            // label22
+            // label33
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(344, 69);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(24, 19);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "幅";
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(7, 277);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(48, 19);
+            this.label33.TabIndex = 85;
+            this.label33.Text = "4列目";
             // 
-            // tbStr26
+            // label34
             // 
-            this.tbStr26.Location = new System.Drawing.Point(139, 130);
-            this.tbStr26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbStr26.Name = "tbStr26";
-            this.tbStr26.Size = new System.Drawing.Size(139, 27);
-            this.tbStr26.TabIndex = 9;
-            this.tbStr26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(7, 240);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(48, 19);
+            this.label34.TabIndex = 84;
+            this.label34.Text = "3列目";
             // 
-            // tbX26
+            // label35
             // 
-            this.tbX26.Location = new System.Drawing.Point(381, 130);
-            this.tbX26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbX26.Name = "tbX26";
-            this.tbX26.Size = new System.Drawing.Size(40, 27);
-            this.tbX26.TabIndex = 11;
-            this.tbX26.Text = "220";
-            this.tbX26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(7, 203);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(48, 19);
+            this.label35.TabIndex = 83;
+            this.label35.Text = "3列目";
             // 
-            // tbY26
+            // label36
             // 
-            this.tbY26.Location = new System.Drawing.Point(428, 130);
-            this.tbY26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbY26.Name = "tbY26";
-            this.tbY26.Size = new System.Drawing.Size(40, 27);
-            this.tbY26.TabIndex = 12;
-            this.tbY26.Text = "10";
-            this.tbY26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(7, 389);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(48, 19);
+            this.label36.TabIndex = 88;
+            this.label36.Text = "5列目";
             // 
-            // tbH26
+            // label37
             // 
-            this.tbH26.Location = new System.Drawing.Point(284, 130);
-            this.tbH26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbH26.Name = "tbH26";
-            this.tbH26.Size = new System.Drawing.Size(40, 27);
-            this.tbH26.TabIndex = 10;
-            this.tbH26.Text = "60";
-            this.tbH26.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(7, 352);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(48, 19);
+            this.label37.TabIndex = 87;
+            this.label37.Text = "5列目";
             // 
-            // tbStr25
+            // label38
             // 
-            this.tbStr25.Location = new System.Drawing.Point(139, 93);
-            this.tbStr25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbStr25.Name = "tbStr25";
-            this.tbStr25.Size = new System.Drawing.Size(139, 27);
-            this.tbStr25.TabIndex = 5;
-            this.tbStr25.Text = "文字列1";
-            this.tbStr25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(7, 389);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(48, 19);
+            this.label38.TabIndex = 98;
+            this.label38.Text = "5列目";
             // 
-            // tbX25
+            // label39
             // 
-            this.tbX25.Location = new System.Drawing.Point(381, 93);
-            this.tbX25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbX25.Name = "tbX25";
-            this.tbX25.Size = new System.Drawing.Size(40, 27);
-            this.tbX25.TabIndex = 7;
-            this.tbX25.Text = "50";
-            this.tbX25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(7, 352);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(48, 19);
+            this.label39.TabIndex = 97;
+            this.label39.Text = "5列目";
             // 
-            // tbY25
+            // label40
             // 
-            this.tbY25.Location = new System.Drawing.Point(428, 93);
-            this.tbY25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbY25.Name = "tbY25";
-            this.tbY25.Size = new System.Drawing.Size(40, 27);
-            this.tbY25.TabIndex = 8;
-            this.tbY25.Text = "10";
-            this.tbY25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(7, 314);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(48, 19);
+            this.label40.TabIndex = 96;
+            this.label40.Text = "4列目";
             // 
-            // tbH25
+            // label41
             // 
-            this.tbH25.Location = new System.Drawing.Point(283, 93);
-            this.tbH25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbH25.Name = "tbH25";
-            this.tbH25.Size = new System.Drawing.Size(40, 27);
-            this.tbH25.TabIndex = 6;
-            this.tbH25.Text = "60";
-            this.tbH25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(7, 277);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(48, 19);
+            this.label41.TabIndex = 95;
+            this.label41.Text = "4列目";
             // 
-            // label23
+            // label42
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(442, 69);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(18, 19);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Y";
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(7, 240);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(48, 19);
+            this.label42.TabIndex = 94;
+            this.label42.Text = "3列目";
             // 
-            // label24
+            // label43
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(390, 69);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(19, 19);
-            this.label24.TabIndex = 23;
-            this.label24.Text = "X";
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(7, 203);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(48, 19);
+            this.label43.TabIndex = 93;
+            this.label43.Text = "3列目";
             // 
-            // label25
+            // label44
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(288, 69);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(34, 19);
-            this.label25.TabIndex = 22;
-            this.label25.Text = "高さ";
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(7, 167);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(48, 19);
+            this.label44.TabIndex = 92;
+            this.label44.Text = "2列目";
             // 
-            // label26
+            // label45
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(178, 69);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(39, 19);
-            this.label26.TabIndex = 21;
-            this.label26.Text = "文字";
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(7, 130);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(48, 19);
+            this.label45.TabIndex = 91;
+            this.label45.Text = "2列目";
             // 
-            // label27
+            // label46
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(95, 133);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(24, 19);
-            this.label27.TabIndex = 79;
-            this.label27.Text = "枠";
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(7, 93);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(48, 19);
+            this.label46.TabIndex = 90;
+            this.label46.Text = "1列目";
             // 
-            // cbVertival
+            // label47
             // 
-            this.cbVertival.AutoSize = true;
-            this.cbVertival.Location = new System.Drawing.Point(13, 28);
-            this.cbVertival.Name = "cbVertival";
-            this.cbVertival.Size = new System.Drawing.Size(73, 23);
-            this.cbVertival.TabIndex = 80;
-            this.cbVertival.Text = "縦文字";
-            this.cbVertival.UseVisualStyleBackColor = true;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(7, 56);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(48, 19);
+            this.label47.TabIndex = 89;
+            this.label47.Text = "1列目";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 531);
+            this.ClientSize = new System.Drawing.Size(1060, 531);
             this.Controls.Add(this.g4);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
@@ -2616,11 +2840,11 @@
             this.g2.ResumeLayout(false);
             this.g2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.g3.ResumeLayout(false);
+            this.g3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.g3.ResumeLayout(false);
-            this.g3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2827,6 +3051,26 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.CheckBox cbVertival;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
     }
 }
 
