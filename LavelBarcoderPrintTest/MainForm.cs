@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using File = System.IO.File;
 
 namespace LavelBarcoderPrintTest
 {
@@ -20,38 +23,6 @@ namespace LavelBarcoderPrintTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //プリンタ一覧取得
-            foreach (string s in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
-            {
-                cbPrinter.Items.Add(s);
-            }
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, dt, stringList, frameList, hyoudaiList);
-            pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
-            b_ev4D.Print();
-        }
-
-        private void btnHyouji_Click(object sender, EventArgs e)
-        {
-            //if (sender.GetType().Equals(typeof(ComboBox)))
-            //{
-
-            //    if (((ComboBox)sender).Text == "")
-            //    {
-            //        return;
-            //    }
-            //}
-            if (sender.GetType().Equals(typeof(TextBox)))
-            {
-                if (((TextBox)sender).Text == "")
-                {
-                    return;
-                }
-            }
-
             //サンプル値
             dt.Clear();
             dt.Columns.Add("Barcode1");
@@ -78,10 +49,37 @@ namespace LavelBarcoderPrintTest
             row[9] = tbStr10.Text;
             row[10] = tbStr12.Text;
             dt.Rows.Add(row);
+            //プリンタ一覧取得
+            foreach (string s in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
+            {
+                cbPrinter.Items.Add(s);
+            }
+            //コントロール状態復元
+            ChangePattern();
+        }
+
+        #region 印刷ボタン
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, dt, stringList, frameList, hyoudaiList);
+            pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
+            b_ev4D.Print();
+        }
+        #endregion
+
+        #region 表示ボタン
+        private void btnHyouji_Click(object sender, EventArgs e)
+        {
+            if (sender.GetType().Equals(typeof(TextBox)))
+            {
+                if (((TextBox)sender).Text == "")
+                {
+                    return;
+                }
+            }
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // コピペ対象コード
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //文字列
             stringList.Clear();
             if (tbStr1.Text.Trim() != "") stringList.Add(new string[] { tbH1.Text, tbW1.Text, tbX1.Text, tbY1.Text, tbStr1.Text, comboBox1.Text, "128", "0" });
@@ -104,7 +102,6 @@ namespace LavelBarcoderPrintTest
                 cbVertival.Checked == true ? "900" : "0"});
             frameList.Clear();
             if (tbStr25.Text.Trim() != "") frameList.Add(new string[] { tbH26.Text, tbW26.Text, tbX26.Text, tbY26.Text });
-
             //表題
             hyoudaiList.Clear();
             if (tbStr11.Text.Trim() != "") hyoudaiList.Add(new string[] { tbH11.Text, tbW11.Text, tbX11.Text, tbY11.Text, tbStr11.Text, comboBox11.Text, "128", "0" });
@@ -117,15 +114,14 @@ namespace LavelBarcoderPrintTest
             if (tbStr18.Text.Trim() != "") hyoudaiList.Add(new string[] { tbH18.Text, tbW18.Text, tbX18.Text, tbY18.Text, tbStr18.Text, comboBox18.Text, "128", "0" });
             if (tbStr19.Text.Trim() != "") hyoudaiList.Add(new string[] { tbH19.Text, tbW19.Text, tbX19.Text, tbY19.Text, tbStr19.Text, comboBox19.Text, "128", "0" });
             if (tbStr20.Text.Trim() != "") hyoudaiList.Add(new string[] { tbH20.Text, tbW20.Text, tbX20.Text, tbY20.Text, tbStr20.Text, comboBox20.Text, "128", "0" });
-
-
             // コピペ対象コード　ここまで
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, stringList, frameList, hyoudaiList);
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
         }
+        #endregion
 
-        #region ソースコピー
+        #region ソースコピーボタン
         private void btnCopySource_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
@@ -133,7 +129,7 @@ namespace LavelBarcoderPrintTest
             //sb.Append("stringList.Clear();" + Environment.NewLine);
             for (int i = 0; i < stringList.Count; i++)
             {
-                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[2] + @""", """ + stringList[i][3] + @""", """  + stringList[i][5] + @""", """ + stringList[i][6] + @""", """ + stringList[i][7] + @""" " + "});" + Environment.NewLine);
+                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[2] + @""", """ + stringList[i][3] + @""", """ + stringList[i][5] + @""", """ + stringList[i][6] + @""", """ + stringList[i][7] + @""" " + "});" + Environment.NewLine);
             }
 
             sb.Append(Environment.NewLine);
@@ -149,14 +145,151 @@ namespace LavelBarcoderPrintTest
         }
         #endregion
 
-        #region パターンチェンジ
+        #region パターンコンボボックスの選択を変更する
         private void cbPattern_TextChanged(object sender, EventArgs e)
         {
-            if (((ComboBox)sender).Text == "A")
-            {
+            ChangePattern();
+        }
+        #endregion
 
+        #region パターンチェンジ
+        private void ChangePattern()
+        {
+            var fileName = @"controlStatus" + cbPattern.Text + ".ini";
+            if (File.Exists(fileName))
+            {
+                ReadControlStatus(fileName);
+                btnHyouji.PerformClick();
             }
         }
         #endregion
+
+        #region コントロール内容保存
+        //①保存したいコントロールのTagプロパティにsaveを設定する
+        //②FormClosing時にAを設定する
+        //③FormLoad時にBを設定する
+        #region A　コントロールの状態を保存する
+        private void SaveControlStatus(string fileName = "controlStatus.ini")
+        {
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // コントロールの状態保存
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            var dict = new Dictionary<string, string>();
+            foreach (Control item in GetAllControls(this))
+            {
+                if (item.Tag == null)
+                {
+                    continue;
+                }
+                if (item.Tag.ToString() != "save")
+                {
+                    continue;
+                }
+                //チェックボックスの場合
+                if (item.GetType().Equals(typeof(CheckBox)))
+                {
+                    dict.Add(item.Name, ((CheckBox)item).Checked.ToString());
+                    continue;
+                }
+                //テキストボックス、コンボボックスの場合
+                dict.Add(item.Name, item.Text);
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // INI保存する
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            SaveDictionary(fileName, dict);
+        }
+        public Control[] GetAllControls(Control top)
+        {
+            ArrayList buf = new ArrayList();
+            foreach (Control c in top.Controls)
+            {
+                buf.Add(c);
+                buf.AddRange(GetAllControls(c));
+            }
+            return (Control[])buf.ToArray(typeof(Control));
+        }
+        #endregion
+        #region B　コントロールの状態を読み込む
+        private void ReadControlStatus(string fileName = "controlStatus.ini")
+        {
+
+            Dictionary<string, string> dict = ReadIni(fileName);
+            if (dict.Count < 1)
+            {
+                return;
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // コントロールの状態復元
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            foreach (Control item in GetAllControls(this))
+            {
+                Console.WriteLine(item.Name);
+                if (item.Tag == null)
+                {
+                    continue;
+                }
+                if (item.Tag.ToString() != "save")
+                {
+                    continue;
+                }
+                //チェックボックスの場合
+                if (item.GetType().Equals(typeof(CheckBox)))
+                {
+                    ((CheckBox)item).Checked =  Convert.ToBoolean(dict[item.Name]);
+                    continue;
+                }
+                item.Text = dict[item.Name];
+            }
+
+        }
+        #endregion
+        #region DictionaryをINIファイルとして保存する
+        private void SaveDictionary(string fileFullPath, Dictionary<string, string> dict)
+        {
+            using (StreamWriter sw = new StreamWriter(fileFullPath, false, Encoding.UTF8))
+            {
+                foreach (KeyValuePair<string, string> item in dict)
+                {
+                    sw.WriteLine(item.Key + "=" + item.Value);
+                }
+            }
+        }
+        #endregion
+        #region INIファイルを読み込む
+        private Dictionary<string, string> ReadIni(string fileFullPath)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            var lines = System.IO.File.ReadLines(fileFullPath);
+            foreach (var line in lines)
+            {
+                var item = line.ToString().Split('=');
+                if (item.Length < 2)
+                {
+                    continue;
+                }
+                if (item[0] == "")
+                {
+                    continue;
+                }
+                dict.Add(item[0], item[1]);
+            }
+            return dict;
+        }
+        #endregion
+        #endregion
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //コントロール状態復元
+            var fileName = @"controlStatus" + cbPattern.Text + ".ini";
+            SaveControlStatus(fileName);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var fileName = @"controlStatus" + cbPattern.Text + ".ini";
+            SaveControlStatus(fileName);
+        }
     }
 }

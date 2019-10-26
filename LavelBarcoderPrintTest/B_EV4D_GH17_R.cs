@@ -131,6 +131,7 @@ namespace LavelBarcoderPrintTest
                 colCount++;
             }
             colCount = 0;
+            //
             foreach (var item in hyoudaiList)
             {
                 SetString(hdc, item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7]);
