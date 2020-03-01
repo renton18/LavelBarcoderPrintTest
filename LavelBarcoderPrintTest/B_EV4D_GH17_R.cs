@@ -47,10 +47,10 @@ namespace LavelBarcoderPrintTest
         #region コンストラクタ
         public B_EV4D_GH17_R(string printerName, DataTable dt, List<string[]> stringList, List<string[]> frameList, List<string[]> hyoudaiList)
         {
-            this.frameList = frameList;
-            this.stringList = stringList;
-            this.hyoudaiList = hyoudaiList;
             this.printerName = printerName;
+            if (frameList != null) this.frameList = frameList;
+            if (stringList != null) this.stringList = stringList;
+            if (hyoudaiList != null) this.hyoudaiList = hyoudaiList;
             this.dt = dt;
         }
         #endregion
@@ -91,6 +91,31 @@ namespace LavelBarcoderPrintTest
                 pd.PrintController = new StandardPrintController();
                 Process.Start(Application.StartupPath);
             }
+            #region サイズ用紙設定
+            PaperKind pk = new PaperKind();
+            switch ("A5")
+            {
+                case "A4":
+                    pk = PaperKind.A4;
+                    break;
+                case "B4":
+                    pk = PaperKind.B4;
+                    break;
+                case "B5":
+                    pk = PaperKind.B5;
+                    break;
+                case "A5":
+                    pk = PaperKind.A5;
+                    break;
+            }
+            foreach (PaperSize ps in pd.PrinterSettings.PaperSizes)
+            {
+                if (ps.Kind == pk)
+                {
+                    pd.DefaultPageSettings.PaperSize = ps;
+                }
+            }
+            #endregion
 
             pd.PrintPage += new PrintPageEventHandler(this.PdPrintPage);
             pd.Print();
@@ -120,18 +145,21 @@ namespace LavelBarcoderPrintTest
         private void PrintImage(IntPtr hdc)
         {
             //縦文字囲い
-            Rectangle(hdc, int.Parse(frameList[0][0]), int.Parse(frameList[0][1]), int.Parse(frameList[0][2]), int.Parse(frameList[0][3]));
+            if (frameList.Count != 0)
+            {
+                Rectangle(hdc, int.Parse(frameList[0][0]), int.Parse(frameList[0][1]), int.Parse(frameList[0][2]), int.Parse(frameList[0][3]));
+            }
             //文字列、バーコード、縦文字
             var colCount = 0;
             foreach (var item in stringList)
             {
-                SetString(hdc, item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7]);
+                SetString(hdc, item[0], item[1], item[2], item[3], dt.Rows[pageCount][item[4]].ToString(), item[5], item[6], item[7]);
                 //本番時
                 //SetString(hdc, item[0], item[1], item[2], item[3], dt.Rows[pageCount][colCount].ToString()., item[5], item[6], item[7]);
                 colCount++;
             }
             colCount = 0;
-            //
+            //表題
             foreach (var item in hyoudaiList)
             {
                 SetString(hdc, item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7]);
@@ -166,13 +194,16 @@ namespace LavelBarcoderPrintTest
 
         //barcorde=0  バーコード
         //barcorde=128  文字列（デフォルト）
-        //verticalString=900 縦文字
-        //verticalString=0 横文字（デフォルト）
+        //verticalString=900 縦文字、 verticalString=0 横文字（デフォルト）
         private void SetString(IntPtr hdc, string h, string w, string x, string y, string data, string dataFont, string barcorde, string verticalStrng)
         {
+            h = h == "" ? "0" : h;
+            w = w == "" ? "0" : w;
+            x = x == "" ? "0" : x;
+            y = y == "" ? "0" : y;
             if (h != "" || w != "" || x != "" || y != "")
             {
-                IntPtr mFont = CreateFont(int.Parse(h), int.Parse(w), 0, 0, 0, false, false, false, int.Parse(barcorde), 0, 0, 0, 0, dataFont);
+                IntPtr mFont = CreateFont(int.Parse(h), int.Parse(w), int.Parse(verticalStrng), 0, 0, false, false, false, int.Parse(barcorde), 0, 0, 0, 0, dataFont);
                 SelectObject(hdc, mFont);
                 TextOut(hdc, int.Parse(x), int.Parse(y), data, Encoding.GetEncoding("Shift_JIS").GetByteCount(data));
                 DeleteObject(mFont);

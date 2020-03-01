@@ -297,7 +297,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(586, 97);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(650, 450);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -890,7 +890,7 @@
             this.tbStr8.Size = new System.Drawing.Size(139, 27);
             this.tbStr8.TabIndex = 29;
             this.tbStr8.Tag = "save";
-            this.tbStr8.Text = "文字列4";
+            this.tbStr8.Text = "str8";
             this.tbStr8.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX8
@@ -934,7 +934,7 @@
             this.tbStr7.Size = new System.Drawing.Size(139, 27);
             this.tbStr7.TabIndex = 25;
             this.tbStr7.Tag = "save";
-            this.tbStr7.Text = "文字列4";
+            this.tbStr7.Text = "str7";
             this.tbStr7.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX7
@@ -978,7 +978,7 @@
             this.tbStr6.Size = new System.Drawing.Size(139, 27);
             this.tbStr6.TabIndex = 21;
             this.tbStr6.Tag = "save";
-            this.tbStr6.Text = "文字列3";
+            this.tbStr6.Text = "str6";
             this.tbStr6.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX6
@@ -1022,7 +1022,7 @@
             this.tbStr5.Size = new System.Drawing.Size(139, 27);
             this.tbStr5.TabIndex = 17;
             this.tbStr5.Tag = "save";
-            this.tbStr5.Text = "文字列3";
+            this.tbStr5.Text = "str5";
             this.tbStr5.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX5
@@ -1066,7 +1066,7 @@
             this.tbStr4.Size = new System.Drawing.Size(139, 27);
             this.tbStr4.TabIndex = 13;
             this.tbStr4.Tag = "save";
-            this.tbStr4.Text = "文字列2";
+            this.tbStr4.Text = "str4";
             this.tbStr4.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX4
@@ -1110,7 +1110,7 @@
             this.tbStr3.Size = new System.Drawing.Size(139, 27);
             this.tbStr3.TabIndex = 9;
             this.tbStr3.Tag = "save";
-            this.tbStr3.Text = "文字列2";
+            this.tbStr3.Text = "str3";
             this.tbStr3.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX3
@@ -1154,7 +1154,7 @@
             this.tbStr2.Size = new System.Drawing.Size(139, 27);
             this.tbStr2.TabIndex = 5;
             this.tbStr2.Tag = "save";
-            this.tbStr2.Text = "文字列1";
+            this.tbStr2.Text = "str2";
             this.tbStr2.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX2
@@ -1234,7 +1234,7 @@
             this.tbStr1.Size = new System.Drawing.Size(139, 27);
             this.tbStr1.TabIndex = 1;
             this.tbStr1.Tag = "save";
-            this.tbStr1.Text = "文字列1";
+            this.tbStr1.Text = "str1";
             this.tbStr1.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX1
@@ -2383,6 +2383,7 @@
             this.cbVertival.Tag = "save";
             this.cbVertival.Text = "縦文字";
             this.cbVertival.UseVisualStyleBackColor = true;
+            this.cbVertival.CheckedChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // label27
             // 
@@ -2503,7 +2504,7 @@
             this.tbStr25.Size = new System.Drawing.Size(139, 27);
             this.tbStr25.TabIndex = 5;
             this.tbStr25.Tag = "save";
-            this.tbStr25.Text = "文字列1";
+            this.tbStr25.Text = "str9";
             this.tbStr25.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX25
@@ -2858,7 +2859,7 @@
             this.tbStr22.Size = new System.Drawing.Size(139, 27);
             this.tbStr22.TabIndex = 5;
             this.tbStr22.Tag = "save";
-            this.tbStr22.Text = "文字列1";
+            this.tbStr22.Text = "Barcode1";
             this.tbStr22.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX22
@@ -2938,7 +2939,7 @@
             this.tbStr21.Size = new System.Drawing.Size(139, 27);
             this.tbStr21.TabIndex = 1;
             this.tbStr21.Tag = "save";
-            this.tbStr21.Text = "111111111111";
+            this.tbStr21.Text = "Barcode1";
             this.tbStr21.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
             // tbX21
@@ -2978,7 +2979,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 531);
+            this.ClientSize = new System.Drawing.Size(1250, 602);
             this.Controls.Add(this.g4);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
@@ -2992,7 +2993,6 @@
             this.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
-            this.Text = "文字列1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

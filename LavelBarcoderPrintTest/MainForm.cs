@@ -37,17 +37,17 @@ namespace LavelBarcoderPrintTest
             dt.Columns.Add("str9");
             dt.Columns.Add("Barcode2");
             DataRow row = dt.NewRow();
-            row[0] = tbStr1.Text;
-            row[1] = tbStr2.Text;
-            row[2] = tbStr3.Text;
-            row[3] = tbStr4.Text;
-            row[4] = tbStr5.Text;
-            row[5] = tbStr6.Text;
-            row[6] = tbStr7.Text;
-            row[7] = tbStr8.Text;
-            row[8] = tbStr9.Text;
-            row[9] = tbStr10.Text;
-            row[10] = tbStr12.Text;
+            row[0] ="111111111111";
+            row[1] = "文字列1";
+            row[2] = "文字列2";
+            row[3] = "文字列3";
+            row[4] = "文字列4";
+            row[5] = "文字列5";
+            row[6] = "文字列6";
+            row[7] = "文字列7";
+            row[8] = "文字列8";
+            row[9] = "文字列9";
+            row[10] = "文字列10";
             dt.Rows.Add(row);
             //プリンタ一覧取得
             foreach (string s in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
@@ -70,13 +70,13 @@ namespace LavelBarcoderPrintTest
         #region 表示ボタン
         private void btnHyouji_Click(object sender, EventArgs e)
         {
-            if (sender.GetType().Equals(typeof(TextBox)))
-            {
-                if (((TextBox)sender).Text == "")
-                {
-                    return;
-                }
-            }
+            //if (sender.GetType().Equals(typeof(TextBox)))
+            //{
+            //    if (((TextBox)sender).Text == "")
+            //    {
+            //        return;
+            //    }
+            //}
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // コピペ対象コード
@@ -98,10 +98,20 @@ namespace LavelBarcoderPrintTest
             if (tbStr23.Text.Trim() != "") stringList.Add(new string[] { tbH23.Text, tbW23.Text, tbX23.Text, tbY23.Text, tbStr23.Text, comboBox23.Text, "0", "0" });
             if (tbStr24.Text.Trim() != "") stringList.Add(new string[] { tbH24.Text, tbW24.Text, tbX24.Text, tbY24.Text, tbStr24.Text, comboBox24.Text, "128", "0" });
             //枠あり文字
-            if (tbStr25.Text.Trim() != "") stringList.Add(new string[] { tbH25.Text, tbW25.Text, tbX25.Text, tbY25.Text, tbStr25.Text, comboBox25.Text, "128",
+            if (tbStr25.Text.Trim() != "") stringList.Add(new string[] {
+                tbH25.Text == "" ? "0" : tbH25.Text,
+                tbW25.Text == "" ? "0" : tbW25.Text,
+                tbX25.Text == "" ? "0" : tbX25.Text,
+                tbY25.Text == "" ? "0" : tbY25.Text,
+                tbStr25.Text,
+                comboBox25.Text, "128",
                 cbVertival.Checked == true ? "900" : "0"});
             frameList.Clear();
-            if (tbStr25.Text.Trim() != "") frameList.Add(new string[] { tbH26.Text, tbW26.Text, tbX26.Text, tbY26.Text });
+            if (tbStr25.Text.Trim() != "") frameList.Add(new string[] {
+                tbH26.Text == "" ? "0" : tbH26.Text,
+                tbW26.Text == "" ? "0" :tbW26.Text,
+                tbX26.Text == "" ? "0" : tbX26.Text,
+                tbY26.Text == "" ? "0" : tbY26.Text });
             //表題
             hyoudaiList.Clear();
             if (tbStr11.Text.Trim() != "") hyoudaiList.Add(new string[] { tbH11.Text, tbW11.Text, tbX11.Text, tbY11.Text, tbStr11.Text, comboBox11.Text, "128", "0" });
@@ -129,7 +139,14 @@ namespace LavelBarcoderPrintTest
             //sb.Append("stringList.Clear();" + Environment.NewLine);
             for (int i = 0; i < stringList.Count; i++)
             {
-                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[2] + @""", """ + stringList[i][3] + @""", """ + stringList[i][5] + @""", """ + stringList[i][6] + @""", """ + stringList[i][7] + @""" " + "});" + Environment.NewLine);
+                sb.Append(@"stringList.Add(new string[] {""" + stringList[i][0] + @""", """ + stringList[i][1] + @""", """ + stringList[i][2] + @""", """ + stringList[i][3] + @""", """ + stringList[i][4] + @""", """ + stringList[i][5] + @""", """ + stringList[i][6] + @""", """ + stringList[i][7] + @""" " + "});" + Environment.NewLine);
+            }
+
+            sb.Append(@"List<string[]> hyoudaiList = new List<string[]>();" + Environment.NewLine);
+            //sb.Append("stringList.Clear();" + Environment.NewLine);
+            for (int i = 0; i < hyoudaiList.Count; i++)
+            {
+                sb.Append(@"hyoudaiList.Add(new string[] {""" + hyoudaiList[i][0] + @""", """ + hyoudaiList[i][1] + @""", """ + hyoudaiList[i][2] + @""", """ + hyoudaiList[i][3] + @""", """ + hyoudaiList[i][4] + @""", """ + hyoudaiList[i][5] + @""", """ + hyoudaiList[i][6] + @""", """ + hyoudaiList[i][7] + @""" " + "});" + Environment.NewLine);
             }
 
             sb.Append(Environment.NewLine);
@@ -236,7 +253,7 @@ namespace LavelBarcoderPrintTest
                 //チェックボックスの場合
                 if (item.GetType().Equals(typeof(CheckBox)))
                 {
-                    ((CheckBox)item).Checked =  Convert.ToBoolean(dict[item.Name]);
+                    ((CheckBox)item).Checked = Convert.ToBoolean(dict[item.Name]);
                     continue;
                 }
                 item.Text = dict[item.Name];
@@ -289,6 +306,19 @@ namespace LavelBarcoderPrintTest
         private void btnSave_Click(object sender, EventArgs e)
         {
             var fileName = @"controlStatus" + cbPattern.Text + ".ini";
+            var fileFullPath = Application.StartupPath + @"\" + fileName;
+            #region ファイルバックアップ //バックアップしたいファイルのフルパスを datFileFullPathに指定する
+            if (File.Exists(fileFullPath) == true) 
+            {
+                //バックアップフォルダがなければ作成する
+                var bkFolder = Path.GetDirectoryName(fileFullPath) + @"\\bk";
+                if (Directory.Exists(bkFolder) == false)
+                {
+                    Directory.CreateDirectory(bkFolder);
+                }
+                File.Move(fileFullPath, bkFolder + @"\" + Path.GetFileName(fileFullPath) + "_" + DateTime.Now.ToString("yyyyMMdd_hhmmss"));
+            }
+            #endregion
             SaveControlStatus(fileName);
         }
     }
