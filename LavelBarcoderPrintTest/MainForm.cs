@@ -61,8 +61,8 @@ namespace LavelBarcoderPrintTest
         #region 印刷ボタン
         private void Button1_Click(object sender, EventArgs e)
         {
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R(cbPrinter.Text, dt, stringList, frameList, hyoudaiList);
-            pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("A4", cbPrinter.Text, dt, stringList, frameList, hyoudaiList, tbZoom.Text.Trim());
+            //pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
             b_ev4D.Print();
         }
         #endregion
@@ -126,7 +126,7 @@ namespace LavelBarcoderPrintTest
             if (tbStr20.Text.Trim() != "") hyoudaiList.Add(new string[] { tbH20.Text, tbW20.Text, tbX20.Text, tbY20.Text, tbStr20.Text, comboBox20.Text, "128", "0" });
             // コピペ対象コード　ここまで
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", dt, stringList, frameList, hyoudaiList);
+            B_EV4D_GH17_R b_ev4D = new B_EV4D_GH17_R("", "", dt, stringList, frameList, hyoudaiList, "1.0");
             pictureBox1.Image = b_ev4D.GetPrintImage(pictureBox1);
         }
         #endregion

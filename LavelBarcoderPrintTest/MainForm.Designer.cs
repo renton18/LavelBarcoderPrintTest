@@ -247,6 +247,8 @@
             this.tbX21 = new System.Windows.Forms.TextBox();
             this.tbY21 = new System.Windows.Forms.TextBox();
             this.tbH21 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.tbZoom = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.g1.SuspendLayout();
             this.g4.SuspendLayout();
@@ -261,10 +263,10 @@
             // 
             // btPrint
             // 
-            this.btPrint.Location = new System.Drawing.Point(953, 12);
+            this.btPrint.Location = new System.Drawing.Point(787, 48);
             this.btPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btPrint.Name = "btPrint";
-            this.btPrint.Size = new System.Drawing.Size(80, 35);
+            this.btPrint.Size = new System.Drawing.Size(89, 35);
             this.btPrint.TabIndex = 0;
             this.btPrint.Text = "印刷";
             this.btPrint.UseVisualStyleBackColor = true;
@@ -273,7 +275,7 @@
             // cbPrinter
             // 
             this.cbPrinter.FormattingEnabled = true;
-            this.cbPrinter.Location = new System.Drawing.Point(654, 17);
+            this.cbPrinter.Location = new System.Drawing.Point(654, 13);
             this.cbPrinter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPrinter.Name = "cbPrinter";
             this.cbPrinter.Size = new System.Drawing.Size(126, 27);
@@ -281,10 +283,10 @@
             // 
             // btnHyouji
             // 
-            this.btnHyouji.Location = new System.Drawing.Point(788, 11);
+            this.btnHyouji.Location = new System.Drawing.Point(788, 8);
             this.btnHyouji.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHyouji.Name = "btnHyouji";
-            this.btnHyouji.Size = new System.Drawing.Size(61, 35);
+            this.btnHyouji.Size = new System.Drawing.Size(89, 35);
             this.btnHyouji.TabIndex = 2;
             this.btnHyouji.Text = "表示";
             this.btnHyouji.UseVisualStyleBackColor = true;
@@ -294,10 +296,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(586, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(586, 129);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(650, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(450, 350);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -1272,7 +1274,7 @@
             // 
             // btnCopySource
             // 
-            this.btnCopySource.Location = new System.Drawing.Point(856, 12);
+            this.btnCopySource.Location = new System.Drawing.Point(885, 8);
             this.btnCopySource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCopySource.Name = "btnCopySource";
             this.btnCopySource.Size = new System.Drawing.Size(89, 35);
@@ -1293,7 +1295,7 @@
             "F",
             "G",
             "H"});
-            this.cbPattern.Location = new System.Drawing.Point(654, 57);
+            this.cbPattern.Location = new System.Drawing.Point(654, 94);
             this.cbPattern.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPattern.Name = "cbPattern";
             this.cbPattern.Size = new System.Drawing.Size(126, 27);
@@ -1304,7 +1306,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(582, 19);
+            this.label6.Location = new System.Drawing.Point(582, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 47;
@@ -1313,7 +1315,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(582, 60);
+            this.label7.Location = new System.Drawing.Point(582, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 19);
             this.label7.TabIndex = 48;
@@ -1321,10 +1323,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(788, 52);
+            this.btnSave.Location = new System.Drawing.Point(788, 91);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(61, 35);
+            this.btnSave.Size = new System.Drawing.Size(89, 35);
             this.btnSave.TabIndex = 49;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -2975,11 +2977,30 @@
             this.tbH21.Text = "90";
             this.tbH21.TextChanged += new System.EventHandler(this.btnHyouji_Click);
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(582, 56);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(54, 19);
+            this.label48.TabIndex = 51;
+            this.label48.Text = "倍率：";
+            // 
+            // tbZoom
+            // 
+            this.tbZoom.Location = new System.Drawing.Point(654, 53);
+            this.tbZoom.Name = "tbZoom";
+            this.tbZoom.Size = new System.Drawing.Size(126, 27);
+            this.tbZoom.TabIndex = 52;
+            this.tbZoom.Text = "2.45";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 602);
+            this.ClientSize = new System.Drawing.Size(1052, 541);
+            this.Controls.Add(this.tbZoom);
+            this.Controls.Add(this.label48);
             this.Controls.Add(this.g4);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
@@ -3235,6 +3256,8 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox tbZoom;
     }
 }
 

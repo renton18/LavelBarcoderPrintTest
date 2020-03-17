@@ -38,16 +38,22 @@ namespace LavelBarcoderPrintTest
 
         int pageCount = 0;
         string printerName = "";
+        string paperSize = "";
         DataTable dt = new DataTable();
         Bitmap canvas;
         List<string[]> stringList = new List<string[]>();
         List<string[]> frameList = new List<string[]>();
         List<string[]> hyoudaiList = new List<string[]>();
 
+        //拡大倍率
+        double zoom = 1.0;
+
         #region コンストラクタ
-        public B_EV4D_GH17_R(string printerName, DataTable dt, List<string[]> stringList, List<string[]> frameList, List<string[]> hyoudaiList)
+        public B_EV4D_GH17_R(string paperSize, string printerName, DataTable dt, List<string[]> stringList, List<string[]> frameList, List<string[]> hyoudaiList, string zoom)
         {
             this.printerName = printerName;
+            this.paperSize = paperSize;
+            this.zoom = double.Parse(zoom);
             if (frameList != null) this.frameList = frameList;
             if (stringList != null) this.stringList = stringList;
             if (hyoudaiList != null) this.hyoudaiList = hyoudaiList;
@@ -81,19 +87,19 @@ namespace LavelBarcoderPrintTest
             pageCount = 0;
             PrintDocument pd = new PrintDocument();
             pd.PrinterSettings.PrinterName = printerName;
+            //ポップアップを表示させない
+            pd.PrintController = new StandardPrintController();
             //プリンタが設定されてない場合はXPSファイルとして出力する
             if (pd.PrinterSettings.PrinterName == "")
             {
                 pd.PrinterSettings.PrinterName = "Microsoft XPS Document Writer";
                 pd.PrinterSettings.PrintFileName = "test.xps";
-                //ポップアップを表示させない
                 pd.DefaultPageSettings.PrinterSettings.PrintToFile = true;
-                pd.PrintController = new StandardPrintController();
                 Process.Start(Application.StartupPath);
             }
             #region サイズ用紙設定
             PaperKind pk = new PaperKind();
-            switch ("A5")
+            switch (paperSize)
             {
                 case "A4":
                     pk = PaperKind.A4;
@@ -123,6 +129,7 @@ namespace LavelBarcoderPrintTest
         private void PdPrintPage(object sender, PrintPageEventArgs e)
         {
             //デバイスコンテキスト取得
+            e.Graphics.PageUnit = GraphicsUnit.Inch;
             IntPtr hdc = e.Graphics.GetHdc();
             PrintImage(hdc);
             pageCount++;
@@ -197,10 +204,10 @@ namespace LavelBarcoderPrintTest
         //verticalString=900 縦文字、 verticalString=0 横文字（デフォルト）
         private void SetString(IntPtr hdc, string h, string w, string x, string y, string data, string dataFont, string barcorde, string verticalStrng)
         {
-            h = h == "" ? "0" : h;
-            w = w == "" ? "0" : w;
-            x = x == "" ? "0" : x;
-            y = y == "" ? "0" : y;
+            h = h == "" ? "0" : Math.Truncate((double.Parse(h) * zoom)).ToString();
+            w = w == "" ? "0" : Math.Truncate((double.Parse(w) * zoom)).ToString();
+            x = x == "" ? "0" : Math.Truncate((double.Parse(x) * zoom)).ToString();
+            y = y == "" ? "0" : Math.Truncate((double.Parse(y) * zoom)).ToString();
             if (h != "" || w != "" || x != "" || y != "")
             {
                 IntPtr mFont = CreateFont(int.Parse(h), int.Parse(w), int.Parse(verticalStrng), 0, 0, false, false, false, int.Parse(barcorde), 0, 0, 0, 0, dataFont);
